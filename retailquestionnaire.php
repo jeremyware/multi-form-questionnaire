@@ -155,7 +155,7 @@ include_once 'formnavigation.php';
               <div class="form-group">
                 <label for="businessOther" class="radio-container">
                   <input class="form-control" type="radio" name="businessstructure-radio" id="businessOther" />
-                  <textarea type="text" placeholder="Other" name="businessstructure-radio" id="businessOtherText"></textarea>
+                  <textarea type="text" placeholder="Other" name="businessstructure-other-text" id="businessOtherText"></textarea>
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -245,7 +245,7 @@ include_once 'formnavigation.php';
                 <p class="form-text text-danger" id="ownerFirstError"></p>
               </div>
               <div class="form-group">
-                <label for="ownerLast">First lame</label>
+                <label for="ownerLast">Last Name</label>
                 <input class="form-control" type="text" id="ownerLast" placeholder="Last Name" name="owner-information-last-name" />
                 <p class="form-text text-danger" id="ownerLastError"></p>
               </div>
@@ -485,7 +485,7 @@ include_once 'formnavigation.php';
             <div class="form-group">
               <label for="productDescription">Briefly describe product/service being sold:</label>
               <br>
-              <input type="text" class="form-control rounded-0" name="describe-product-info" cols="45" rows="5" id="productDescription" />
+              <textarea type="text" class="form-control rounded-0" name="describe-product-info" cols="45" rows="5" id="productDescription">Sample Text</textarea>
               <p class="form-text text-danger" id="productDescriptionError"></p>
             </div>
             <br>
@@ -516,16 +516,13 @@ include_once 'formnavigation.php';
                   <input class="form-control" type="radio" name="transactiontype-radio" value="Card Swipe" id="productCardSwipe">
                   <span class="checkmark"></span>
                 </label>
-
               </div>
-
               <div class="form-group">
                 <label for="productMailTelephone" class="product-radio-container"> Mail order/Telephone Order
                   <input class="form-control" type="radio" name="transactiontype-radio" value="Mail order/Telephone order" id="productMailTelephone">
                   <span class="checkmark"></span>
                 </label>
               </div>
-
               <div class="form-group">
                 <label for="productInternetEcommerce" class="product-radio-container">Internet/Ecommerce
                   <input class="form-control" type="radio" name="transactiontype-radio" value="Internet/Ecommerce" id="productInternetEcommerce">
@@ -533,7 +530,6 @@ include_once 'formnavigation.php';
                 </label>
               </div>
               <p class="form-text text-danger" id="productTransactionError"></p>
-
             </fieldset>
             <br>
             <div class="form-group">

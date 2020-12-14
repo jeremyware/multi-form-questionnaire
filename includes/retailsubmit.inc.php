@@ -16,6 +16,7 @@ if (isset($_POST["submit"])) {
  $contactFirstName = $_POST['contact-first-name'];
  $contactLastName = $_POST['contact-last-name'];
  $businessStructure = $_POST['businessstructure-radio'];
+ $businessStructureOther = $_POST['businessstructure-other-text'];
  $federalTaxId = $_POST['federal-tax-id'];
  $businessDateFormed = $_POST['date-business-formed'];
  $businessStateCreated = $_POST['state-business-created'];
@@ -70,6 +71,7 @@ if (isset($_POST["submit"])) {
   $contactFirstName,
   $contactLastName,
   $businessStructure,
+  $businessStructureOther,
   $federalTaxId,
   $businessDateFormed,
   $businessStateCreated,

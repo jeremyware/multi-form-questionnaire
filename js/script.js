@@ -28,15 +28,3 @@ function showHidden(checked) {
     document.getElementById('hiddenForm').style.display = 'none';
   }
 };
-
-function showOther(checked) {
-  if (checked == true) {
-    document.getElementById('otherChoice').style.display = 'block';
-  } else {
-    document.getElementById('otherInput').style.display = 'none';
-  }
-};
-
-$('.selfmessage').on('focus', function (e) {
-  $('#other0').prop('checked', true);
-});

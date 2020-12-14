@@ -166,6 +166,7 @@ function createBusiness(
 	$contactFirstName,
 	$contactLastName,
 	$businessStructure,
+	$businessStructureOther,
 	$federalTaxId,
 	$businessDateFormed,
 	$businessStateCreated,
@@ -199,7 +200,7 @@ function createBusiness(
 	$productHighTicket,
 	$transactionType
 ) {
-	$sql = "INSERT Into PlatinumPaymentRetailInfo (businessName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip, companyPhoneNumber, companyWebsiteUrl, contactFirstName, contactLastName, businessStructure, federalTaxId, businessDateFormed, businessStateCreated, ownerFirstName, ownerLastName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, secondaryOwnerZip, secondaryOwnerDateOfBirth, secondaryOwnerDriversLicense, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, transactionType) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+	$sql = "INSERT Into PlatinumPaymentRetailInfo (businessName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip, companyPhoneNumber, companyWebsiteUrl, contactFirstName, contactLastName, businessStructure, businessStructureOther, federalTaxId, businessDateFormed, businessStateCreated, ownerFirstName, ownerLastName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, secondaryOwnerZip, secondaryOwnerDateOfBirth, secondaryOwnerDriversLicense, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, transactionType) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -210,7 +211,7 @@ function createBusiness(
 
 	mysqli_stmt_bind_param(
 		$stmt,
-		"ssssssssssssssssssssssssssssssiiiiiiiiiiiii",
+		"sssssssssssssssssssssssssssssssiiiiiiiiiiiii",
 		$businessName,
 		$companyStreet,
 		$companyStreetLine2,
@@ -222,6 +223,7 @@ function createBusiness(
 		$contactFirstName,
 		$contactLastName,
 		$businessStructure,
+		$businessStructureOther,
 		$federalTaxId,
 		$businessDateFormed,
 		$businessStateCreated,
