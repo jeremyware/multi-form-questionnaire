@@ -1,0 +1,404 @@
+body {
+  background-color: #333333;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#second,
+#third,
+#fourth,
+#result {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  font-family: 'Roboto', sans-serif;
+  color: #111;
+  line-height: 24px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 32px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+}
+
+nav .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 120px;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+}
+
+nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #74838f;
+}
+
+
+section {
+  background-color: #fff;
+  width: 94%;
+  padding: 20px 3%;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* form navigation */
+
+.nav-form-btn-section {
+  width: 100%;
+  height: 60px;
+  background-color: #212121;
+}
+
+.nav-form-btn-section .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-form-btn-section img {
+  width: 60px;
+}
+
+.nav-form-btn-section ul li {
+  list-style: none;
+  float: left;
+}
+
+.nav-form-btn-section ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.nav-form-btn-section ul li a:hover {
+  color: #74838f;
+}
+
+/* index */
+
+.index-intro p {
+  text-align: center;
+}
+
+.index-categories-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-categories-list div {
+  width: 24%;
+  height: 200px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sign up */
+
+.signup-form-form {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.signup-form form {
+  width: 30%;
+}
+
+.signup-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.signup-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* business information */
+
+.business-information-form-form {
+  display: flex;
+  justify-content: center;
+}
+
+.business-information-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.business-information-form form {
+  width: 30%;
+}
+
+.business-information-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.business-information-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* business profile */
+
+.business-profile-form-form {
+  display: flex;
+  justify-content: center;
+}
+
+.business-profile-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.business-profile-form form {
+  width: 30%;
+}
+
+.business-profile-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.business-profile-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.radio-container input:checked~.checkmark {
+  background-color: #007ecc;
+}
+
+
+
+.radio-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* owner information */
+
+.owner-information-form-form {
+  display: flex;
+  justify-content: center;
+}
+
+.owner-information-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.owner-information-form form {
+  width: 30%;
+}
+
+.owner-information-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.owner-information-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* product information */
+
+.product-information-form-form {
+  display: flex;
+  justify-content: center;
+}
+
+.product-information-form p {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #007ecc;
+}
+
+.product-information-form form {
+  width: 30%;
+}
+
+.product-information-form form input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  margin-bottom: 4px;
+}
+
+.product-information-form form button {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.product-radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.product-radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.product-radio-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.product-radio-container input:checked~.checkmark {
+  background-color: #007ecc;
+}
+
+
+.product-radio-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.product-radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* checkbox styles */
