@@ -128,7 +128,7 @@ function loginUser($conn, $username, $pwd)
 
 function bidExists($conn, $businessName)
 {
-	$sql = "SELECT businessName FROM PlatinumPaymentRetailInfo WHERE businessName = ? OR ownerTitle = ? Or ownerSocial = ? OR secondaryOwnerSocial = ?;";
+	$sql = "SELECT businessName FROM PlatinumPaymentRetailInfo WHERE businessName = ? ";
 	$stmt = mysqli_stmt_init($conn);
 
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -138,7 +138,7 @@ function bidExists($conn, $businessName)
 		print_r($conn->error_list);
 		exit();
 	}
-	mysqli_stmt_bind_param($stmt, "ssii", $businessName, $ownerTitle, $ownerSocial, $secondaryOwnerSocial);
+	mysqli_stmt_bind_param($stmt, "s", $businessName);
 	mysqli_stmt_execute($stmt);
 
 	$resultData = mysqli_stmt_get_result($stmt);
@@ -204,14 +204,14 @@ function createBusiness(
 
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../home.php?error=createsucess");
+		header("location: ../retailquestionnaire.php?error=stmtfailed");
 		exit();
 	}
 
 
 	mysqli_stmt_bind_param(
 		$stmt,
-		"sssssssssssssssssssssssssssssssiiiiiiiiiiiii",
+		"sssssiisssssisssssiisssssissssiissssisssiiis",
 		$businessName,
 		$companyStreet,
 		$companyStreetLine2,
@@ -258,12 +258,9 @@ function createBusiness(
 		$transactionType
 	);
 
-	echo "Error:\n";
-	print_r($conn->error_list);
-	echo "Error:\n";
-	print_r($stmt->error_list);
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 	mysqli_close($conn);
+	header("location: ../index.php?error=none");
 	exit();
 }

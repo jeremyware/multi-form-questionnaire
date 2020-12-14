@@ -51,12 +51,10 @@ if (isset($_POST["submit"])) {
  $transactionType = $_POST['transactiontype-radio'];
 
 
- if (bidExists($conn, $businessName, $ownerTitle, $ownerSocial, $secondaryOwnerSocial) !== false) {
+ if (bidExists($conn, $businessName) !== false) {
   header("location: ../retailquestionnaire.php?error=businessidtaken");
   exit();
  }
- echo "Error:\n";
- print_r($conn->error_list);
 
  createBusiness(
   $conn,
@@ -106,6 +104,6 @@ if (isset($_POST["submit"])) {
   $transactionType
  );
 } else {
- header("location: ../retailquestionnaire.php=error/connectionfailed");
+ header("location: ../index.php?reviewform");
  exit();
 }

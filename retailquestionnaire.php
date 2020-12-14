@@ -136,19 +136,19 @@ include_once 'formnavigation.php';
               <br>
               <div class="form-group">
                 <label class="radio-container">Corporation
-                  <input class="form-control" type="radio" name="businessStructure-radio" value="Corporation" id="businessCorp">
+                  <input class="form-control" type="radio" name="businessstructure-radio" value="Corporation" id="businessCorp">
                   <span class="checkmark"></span>
                 </label>
               </div>
               <div class="form-group">
                 <label class="radio-container"> LLC
-                  <input class="form-control" type="radio" name="businessStructure-radio" value="LLC" id="businessLlc">
+                  <input class="form-control" type="radio" name="businessstructure-radio" value="LLC" id="businessLlc">
                   <span class="checkmark"></span>
                 </label>
               </div>
               <div class="form-group">
                 <label class="radio-container">Sole Propietor
-                  <input class="form-control" type="radio" name="businessStructure-radio" value="Sole Proprietor" id="businessProprietor" />
+                  <input class="form-control" type="radio" name="businessstructure-radio" value="Sole Proprietor" id="businessProprietor" />
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -485,7 +485,7 @@ include_once 'formnavigation.php';
             <div class="form-group">
               <label for="productDescription">Briefly describe product/service being sold:</label>
               <br>
-              <textarea type="text" class="form-control rounded-0" name="describe-product-info" cols="45" rows="5" id="productDescription">Sample Text</textarea>
+              <textarea type="text" class="form-control rounded-0" name="describe-product-info" cols="45" rows="5" id="productDescription" placeholder="Example"></textarea>
               <p class="form-text text-danger" id="productDescriptionError"></p>
             </div>
             <br>
