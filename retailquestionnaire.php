@@ -548,43 +548,46 @@ include_once 'formnavigation.php';
                   <br>
                   <p>Below is a summary of the information you provided.<br><br>
                     <?php
-                    echo 'Business Name: ' . $_POST["businessName"] . '<br>';
-                    echo 'Street Address: ' . $_POST["companyStreet"] . '<br>';
-                    echo 'Street Address Line 2: ' . $_POST["companyStreetLine2"] . '<br>';
-                    echo 'State: ' . $_POST["companyState"] . '<br>';
-                    echo 'City: ' . $_POST["companyCity"] . '<br>';
-                    echo 'Zipcode: ' . $_POST["companyZip"] . '<br>';
-                    echo 'Company Phone Number: ' . $_POST["companyPhoneNumber"] . '<br>';
-                    echo 'Company Website: ' . $_POST["companyWebsiteUrl"] . '<br>';
-                    echo 'Contact First Name: ' . $_POST["contactFirstName"] . '<br>';
-                    echo 'Contact Last Name: ' . $_POST["contactLastName"] . '<br>';
-                    echo 'Business Structure: ' . $_POST["businessStructure"] . '<br>';
-                    echo 'Business Structure: ' . $_POST["businessStructureOther"] . '<br>';
-                    echo 'Federal Tax ID: ' . $_POST["federalTaxId"] . '<br>';
-                    echo 'Date Business Created: ' . $_POST["businessDateFormed"] . '<br>';
-                    echo 'State Business Created: ' . $_POST["businessStateCreated"] . '<br>';
-                    echo 'First Name: ' . $_POST["ownerFirstName"] . '<br>';
-                    echo 'Last Name: ' . $_POST["ownerLastName"] . '<br>';
-                    echo 'Title: ' . $_POST["ownerTitle"] . '<br>';
-                    echo 'Ownership Age: ' . $_POST["ownerAge"] . '<br>';
-                    echo 'Social Security Number: ' . $_POST["ownerSocial"] . '<br>';
-                    echo 'Date of Birth: ' . $_POST["ownerDateOfBirth"] . '<br>';
-                    echo 'Street Address: ' . $_POST["ownerCompanyAddress"] . '<br>';
-                    echo 'Street Address Line 2: ' . $_POST["ownerCompanyAddressLine2"] . '<br>';
-                    echo 'City: ' . $_POST["ownerCompanyCity"] . '<br>';
-                    echo 'State: ' . $_POST["ownerCompanyState"] . '<br>';
-                    echo 'Zipecode: ' . $_POST["ownerCompanyZip"] . '<br>';
-                    echo 'Driver\'s License Number: ' . $_POST["ownerCompanyDriversLicense"] . '<br>';
-                    echo 'Product Description: ' . $_POST["product-radio-container"] . '<br>';
-                    echo 'Projected Annual Volume: ' . $_POST["productAnnualVolume"] . '<br>';
-                    echo 'Average Ticket: ' . $_POST["productAverageTicket"] . '<br>';
-                    echo 'High Ticket: ' . $_POST["productHighTicket"] . '<br>';
-                    echo 'Transaction Type: ' . $_POST["transactionType"] . '<br>';
-                    echo "<form action='includes/retailsubmit.inc.php' method='post'>";
-                    echo '<a href="#" class="btn btn-danger" id="prev-5">Previous</a>';
-                    echo "<input type='submit' name='submit' value='Submit' id='submit' class='btn btn-success'>";
+                    if (isset($_GET("#form-data"))) {
+                      echo 'Business Name: ' . $_POST["businessName"] . '<br>';
+                      echo 'Street Address: ' . $_POST["companyStreet"] . '<br>';
+                      echo 'Street Address Line 2: ' . $_POST["companyStreetLine2"] . '<br>';
+                      echo 'State: ' . $_POST["companyState"] . '<br>';
+                      echo 'City: ' . $_POST["companyCity"] . '<br>';
+                      echo 'Zipcode: ' . $_POST["companyZip"] . '<br>';
+                      echo 'Company Phone Number: ' . $_POST["companyPhoneNumber"] . '<br>';
+                      echo 'Company Website: ' . $_POST["companyWebsiteUrl"] . '<br>';
+                      echo 'Contact First Name: ' . $_POST["contactFirstName"] . '<br>';
+                      echo 'Contact Last Name: ' . $_POST["contactLastName"] . '<br>';
+                      echo 'Business Structure: ' . $_POST["businessStructure"] . '<br>';
+                      echo 'Business Structure: ' . $_POST["businessStructureOther"] . '<br>';
+                      echo 'Federal Tax ID: ' . $_POST["federalTaxId"] . '<br>';
+                      echo 'Date Business Created: ' . $_POST["businessDateFormed"] . '<br>';
+                      echo 'State Business Created: ' . $_POST["businessStateCreated"] . '<br>';
+                      echo 'First Name: ' . $_POST["ownerFirstName"] . '<br>';
+                      echo 'Last Name: ' . $_POST["ownerLastName"] . '<br>';
+                      echo 'Title: ' . $_POST["ownerTitle"] . '<br>';
+                      echo 'Ownership Age: ' . $_POST["ownerAge"] . '<br>';
+                      echo 'Social Security Number: ' . $_POST["ownerSocial"] . '<br>';
+                      echo 'Date of Birth: ' . $_POST["ownerDateOfBirth"] . '<br>';
+                      echo 'Street Address: ' . $_POST["ownerCompanyAddress"] . '<br>';
+                      echo 'Street Address Line 2: ' . $_POST["ownerCompanyAddressLine2"] . '<br>';
+                      echo 'City: ' . $_POST["ownerCompanyCity"] . '<br>';
+                      echo 'State: ' . $_POST["ownerCompanyState"] . '<br>';
+                      echo 'Zipecode: ' . $_POST["ownerCompanyZip"] . '<br>';
+                      echo 'Driver\'s License Number: ' . $_POST["ownerCompanyDriversLicense"] . '<br>';
+                      echo 'Product Description: ' . $_POST["product-radio-container"] . '<br>';
+                      echo 'Projected Annual Volume: ' . $_POST["productAnnualVolume"] . '<br>';
+                      echo 'Average Ticket: ' . $_POST["productAverageTicket"] . '<br>';
+                      echo 'High Ticket: ' . $_POST["productHighTicket"] . '<br>';
+                      echo 'Transaction Type: ' . $_POST["transactionType"] . '<br>';
+                      echo "<form action='includes/retailsubmit.inc.php' method='post'>";
+                      echo '<a href="#" class="btn btn-danger" id="prev-5">Previous</a>';
+                      echo "<input type='submit' name='submit' value='Submit' id='submit' class='btn btn-success'>";
+                    } else {
+                      die();
+                    }
                     ?>
-
             </fieldset>
           </div>
       </div>
