@@ -10,7 +10,7 @@ body {
 #second,
 #third,
 #fourth,
-#result {
+#fifth {
   display: none;
 }
 
@@ -110,7 +110,7 @@ section {
   display: none;
 }
 
-/* form navigation */
+/* form button styles navigation */
 
 .nav-form-btn-section {
   width: 100%;
@@ -120,7 +120,7 @@ section {
 
 .nav-form-btn-section .wrapper {
   height: 100%;
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
 }
@@ -401,4 +401,4 @@ section {
   background: white;
 }
 
-/* checkbox styles */
+/* Form nav styles */

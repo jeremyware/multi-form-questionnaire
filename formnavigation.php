@@ -20,10 +20,10 @@ include_once 'includes/functions.inc.php';
   <div class="wrapper">
 
    <ul>
-    <li><a href="retailquestionnaire.php">Business Information</a></li>
-    <li><a href="businessprofile.php">Business Profile</a></li>
-    <li><a href="rtlowninfo.php">Owner Information</a></li>
-    <li><a href="productinformation.php">Product Information</a></li>
+    <li><a href="#" id="rtlBusinessId">Business Information</a></li>
+    <li><a href="#" id="rtlProfileId">Business Profile</a></li>
+    <li><a href="#" id="rtlOwnerId">Owner Information</a></li>
+    <li><a href="#" id="rtlProductId">Product Information</a></li>
     <?php
 
     ?>

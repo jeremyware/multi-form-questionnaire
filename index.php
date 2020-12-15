@@ -12,13 +12,13 @@ include_once 'header.php';
   <div class="index-categories-list">
 
     <div>
-      <a href="rtlbusinfo.php">Retail Questionnaire</a>
+      <a href="retailquestionnaire.php">Retail Questionnaire</a>
     </div>
     <div>
-      <a href="mrcbusinfo.php">Merchant Questionnaire</a>
+      <a href="merchantquestionnaire.php">Merchant Questionnaire</a>
     </div>
     <div>
-      <a href="cchbusinfo.php">Coaching Questionnaire</a>
+      <a href="coachingquestionnaire.php">Coaching Questionnaire</a>
     </div>
 </section>
 

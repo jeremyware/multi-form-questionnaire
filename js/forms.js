@@ -7,35 +7,11 @@
      if ($("#businessName").val() == '') {
        $("#businessNameError").html('* Required Field.');
        return false;
-     } else if ($("#businessStreet1").val() == '') {
-       $("#businessStreet1Error").html('* Required Field.');
-       return false;
-     } else if ($("#businessCity").val() == '') {
-       $("#businessCityError").html('* Required Field.');
-       return false;
-     } else if ($("#businessState").val() == '') {
-       $("#businessStateError").html('* Required Field.');
-       return false;
-     } else if ($("#businessZipecode").val() == '') {
-       $("#businessZipecodeError").html('* Required Field.');
-       return false;
-     } else if ($("#businessNumber").val() == '') {
-       $("#businessNumberError").html('* Required Field.');
-       return false;
-     } else if ($("#businessSite").val() == '') {
-       $("#businessSiteError").html('* Required Field.');
-       return false;
-     } else if ($("#contactFirst").val() == '') {
-       $("#contactFirstError").html('* Required Field.');
-       return false;
-     } else if ($("#contactLast").val() == '') {
-       $("#contactLastError").html('* Required Field.');
-       return false;
      } else {
        $("#second").show();
        $("#first").hide();
        $("#progressBar").css("width", "50%");
-       $("#progressText").html("Step - 2");
+       $("#progressText").html("");
      }
 
 
@@ -45,14 +21,21 @@
      $("#third").show();
      $("#second").hide();
      $("#progressBar").css("width", "75%");
-     $("#progressText").html("Step - 3");
+     $("#progressText").html("");
    });
 
    $("#next-3").click(function () {
      $("#fourth").show();
      $("#third").hide();
      $("#progressBar").css("width", "100%");
-     $("#progressText").html("Step - 4");
+     $("#progressText").html("");
+   });
+
+   $("#next-4").click(function () {
+     $("#fifth").show();
+     $("#fourth").hide();
+     $("#progressBar").css("width", "100%");
+     $("#progressText").html("");
    });
 
 
@@ -88,20 +71,27 @@
      $("#second").hide();
      $("#first").show();
      $("#progressBar").css("width", "25%");
-     $("#progressText").html("Step - 1");
+     $("#progressText").html("");
    });
    $("#prev-3").click(function () {
      $("#third").hide();
      $("#second").show();
      $("#progressBar").css("width", "50%");
-     $("#progressText").html("Step - 2");
+     $("#progressText").html("");
    });
 
    $("#prev-4").click(function () {
      $("#fourth").hide();
      $("#third").show();
+     $("#progressBar").css("width", "50%");
+     $("#progressText").html("");
+   });
+
+   $("#prev-5").click(function () {
+     $("#fifth").hide();
+     $("#fourth").show();
      $("#progressBar").css("width", "75%");
-     $("#progressText").html("Step - 3");
+     $("#progressText").html("");
    });
 
  });
