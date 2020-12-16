@@ -646,202 +646,257 @@
       </div>
 
     </div>
+
+
+
+
     <div class="offer-campaign-container">
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignDescribeProduct">Describe the product/service being sold.</label>
+        <input type="text" name="mrc-campaign-Describe-Product" id="mrcCampaignDescribeProduct">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductSold">How is the product/service ordered or purchased?</label>
+        <input type="text" name="mrc-campaign-product-sold" id="mrcCampaignProductSold">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignPricePoint">What are the price points for the product/service?</label>
+        <input type="text" name="mrc-campaign-price-point" id="mrcCampaignPricePoint">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductFrontBack">Is the product/service being sold through a Front End or as an upsell offer? With any upsell offers, please list all applicable Front/Back end partners with the product/service being sold. </label>
+        <input type="text" name="mrc-campaign-product-front-back'" id="mrcCampaignProductFrontBack">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignCrossProduct">Is the product/service being cross sold with any other product/service? If yes, explain.</label>
+        <input type="text" name="mrc-campaign-cross-product" id="mrcCampaignCrossProduct">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductFreeTrial">Is there a free trial and/or auto ship program attached to the product/service? </label>
+        <input type="text" name="mrc-campaign-product-free-trial" id="mrcCampaignProductFreeTrial">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductBilling">Is there recurring billing/continuity plan associated with the product/service?</label>
+        <input type="text" name="mrc-campaign-product-billing" id="mrcCampaignProductBilling">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductMarketing">How is the product/service advertised, marketed, and/or promoted to support the projected volume/transaction estimates? (i.e. radio, print, affiliate networks, CPA, publishers, and/or other sources to support the transaction count per day)</label>
+        <input type="text" name="mrc-campaign-product-marketing" id="mrcCampaignProductMarketing">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
+        <label for="mrcCampaignMajorCPA">List all major affiliates (sub affiliates), CPA’s, and publishers used to generate sales.
         </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <input type="text" name="mrc-campaign-major-cpa" id="mrcCampaignMajorCPA">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignLeadQuality">How do you track affiliate sales and monitor for lead quality?</label>
+        <input type="text" name="mrc-campaign-lead-quality" id="mrcCampaignLeadQuality">
       </div>
+
       <div class="form-group">
-        <label for="mrcBankCheckingSaving">Is this a checking or savings account?
-        </label>
-        <input type="text" name="mrc-bank-checking-saving" id="mrcBankCheckingSaving">
+        <label for="mrcCampaignProductWarrenty">What is the warranty, return, and refund policy?</label>
+        <input type="text" name="mrc-campaign-product-warrenty" id="mrcCampaignProductWarrenty">
       </div>
+
+      <div class="form-group">
+        <label for="mrcCampaignCustomerCancel">How can a customer cancel from Auto Ship/Bill and/or continuity program?/label>
+          <input type="text" name="mrc-campaign-customer-cancel" id="mrcCampaignCustomerCancel">
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="fulfillment">
         <button class="btn-left">Fulfillment</button>
-        se-outsourced">Is fulfillment handled In House or outsourced? If outsourced,
-        with whom?
-        </label>
 
-        <input type="text" name="fulfillment-house-outsourced" id="input-fulfillment-house-outsourced">
+        <div class="form-group">
+          <label for="mrcFulfillmentSourcing">Is fulfillment handled In House or outsourced? If outsourced, with whom?
+          </label>
+          <input type="text" name="mrc-fulfillment-sourcing" id="mrcFulfillmentSourcing">
+        </div>
 
-        <label for="">Which of the following shipping confirmations do you use?</label>
+        <fieldset class="transaction-input-radio" name="shippingconfirmation" id="shippingConfirmation">
+          <label for="shippingConfirmation">
+            <h3> Which of the following shipping confirmations do you use?</h3>
+          </label>
+          <div class="form-group">
+            <label for="mrcFulfillmentDelivery" class="product-radio-container"> Delivery Confirmation
+              <input class="form-control" type="radio" name="mrc-fulfillment-shipping" value="Delivery Confirmation" id="mrcFulfillmentDelivery">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="mrcFulfillmentSignature" class="product-radio-container"> Signature Confirmation
+              <input class="form-control" type="radio" name="mrc-fulfillment-shipping" value="Signature Confirmation" id="mrcFulfillmentSignature">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="mrcFulfillmentNone" class="product-radio-container">None
+              <input class="form-control" type="radio" name="mrc-fulfillment-shipping" value="None" id="mrcFulfillmentNone">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </fieldset>
 
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-delivery-confirmation" name="product-info-selector" value="delivery-confirmation">
-          <label id="label-delivery-confirmation" for="input-delivery-confirmation">Delivery Confirmation </label>
-        </span>
 
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-signature-confirmation" name="product-info-selector" value="signature-confirmation">
-          <label id="label-signature-confirmation" for="input-signature-confirmation"> Signature Confirmation </label>
-        </span>
+        <div class="form-group">
+          <label for="mrcFulfillmentSourcing">Who manufactures/produces the product/service?</label>
+          <input type="text" name="mrc-fulfillment-sourcing" id="mrcFulfillmentSourcing">
+        </div>
 
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-none" name="product-info-selector" value="none">
-          <label id="label-none" for="input-none"> None </label>
-        </span>
 
-        <label for="label-manufactures-produce">Who manufactures/produces the product/service?</label>
+        <fieldset class="transaction-input-radio" name="transactiontype" id="transactionType">
+          <label for="mrcFulfillment">
+            <h3> Transaction Type: </h3>
+          </label>
+          <div class="form-group">
+            <label for="ProductsSoldY" class="product-radio-container"> Yes
+              <input class="form-control" type="radio" name="mrcfulfillment-radio" value="Yes" id="ProductsSoldY">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="ProductsSoldN" class="product-radio-container"> No
+              <input class="form-control" type="radio" name="mrcfulfillment-radio" value="No" id="ProductsSoldY">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </fieldset>
 
-        <input type="text" name="manufactures-produce" id="input-manufactures-produce">
-        <label for="label-sell-supplements">Do you sell digestibles, supplements, etc. ?</label>
 
-        <span class="form-radio-item" style="clear:none">
-          <input type="radio" class="form-radio" id="input-sell-supplments-y" name="product-info-selector" value="mailing-selector-y">
-          <label id="label-sell-supplments-y" for="input-sell-supplments-y"> Yes </label>
-        </span>
+        <div class="form-group">
+          <label for="mrcFulfillmentUnitsPerDay">How many units per day is your manufacturer capable of producing should demand increase?</label>
+          <input type="text" name="mrc-fulfillment-units" id="mrcFulfillmentUnitsPerDay">
+        </div>
 
-        <span class="form-radio-item" style="clear:none">
-          <input type="radio" class="form-radio" id="input-sell-supplments-n" name="product-info-selector" value="sell-supplments-n">
-          <label id="label-mailing-n" for="input-sell-supplments-n"> No </label>
-        </span>
+        <div class="form-group">
+          <label for="mrcFulfillmentProductStock">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-fulfillment-product-stock" id="mrcFulfillmentProductStock">
+        </div>
 
-        <label for="label-units-anticipated">How many units per day is your manufacturer capable of producing should
-          demand increase?</label>
+        <div class="form-group">
+          <label for="mrcFulfillmentInventoryReport">Do you receive Inventory/Inventory Management Reports?</label>
+          <input type="text" name="mrc-fulfillment-inventory-report" id="mrcFulfillmentInventoryReport">
+        </div>
 
-        <input type="text" name="units-anticipated" id="input-units-anticipated">
+        <div class="form-group">
+          <label for="mrcFulfillmentShippedTime">Will tangible products be shipped within 7 calendar days of sale capture?</label>
+          <input type="text" name="mrc-fulfillment-shipped-time" id="mrcFulfillmentShippedTime">
+        </div>
 
-        <label for="label-average-on-hand">On average, how much product is maintained in stock, either in house or at
-          your shipping facility?</label>
+        <div class="form-group">
+          <label for="mrcFulfillmentOrderInfo">Who is taking the order?</label>
+          <input type="text" name="mrc-fulfillment-order-info" id="mrcFulfillmentOrderInfo">
+        </div>
 
-        <input type="text" name="average-on-hand" id="input-average-on-hand">
+        <div class="form-group">
+          <label for="mrcFulfillmentProcessTime">At what time or point during the ordering process does the merchant or the fulfillment center bill the cardholder (i.e at time of order, at time of shipping, etc…)?</label>
+          <input type="text" name="mrc-fulfillment-process-time" id="mrcFulfillmentProcessTime">
+        </div>
 
-        <label for="label-management-reports">Do you receive Inventory/Inventory Management Reports?</label>
+        <div class="form-group">
+          <label for="mrcFulfillmentProductAvailability">
+            What happens if the product is unavailable or if service cannot be rendered (i.e. cease billing customer, issue refund, or notify customer of delayed shipment)?</label>
+          <input type="text" name="mrc-fulfillment-product-availability" id="mrcFulfillmentProductAvailability">
+        </div>
 
-        <input type="text" name="management-reports" id="input-management-reports">
+        <div class="form-group">
+          <label for="mrcFulfillmentBackOrder">Do you continue to accept sales if products/services are backorder/unavailable?</label>
+          <input type="text" name="mrc-fulfillment-backorder" id="mrcFulfillmentBackOrder">
+        </div>
 
-        <label for="label-tangible-product">Will tangible products be shipped within 7 calendar days of sale capture?
-        </label>
 
-        <input type="text" name="tangible-product" id="input-tangible-product">
 
-        <label for="label-order-information">Who is taking the order?</label>
 
-        <input type="text" name="order-information" id="input-order-information">
 
-        <label for="label-cardholder-billing-information">At what time or point during the ordering process does the
-          merchant or the fulfillment center bill the cardholder (i.e at time of order, at time of shipping,
-          etc…)?</label>
 
-        <input type="text" name="cardholder-billing-information" id="input-cardholder-billing-information">
 
-        <label for="label-product-unavailable-update">What happens if the product is unavailable or if service cannot
-          be rendered (i.e. cease billing customer, issue refund, or notify customer of delayed shipment)?</label>
 
-        <input type="text" name="product-unavailable-update" id="input-product-unavailable-update">
 
-        <label for="label-backorder-acceptance">Do you continue to accept sales if products/services are
-          backorder/unavailable?
-        </label>
-
-        <input type="text" name="backorder-acceptance" id="input-backorder-acceptance">
 
       </div>
       <div class="customer-service-container">
         <button class="btn-left">Customer Service</button>
-        e-house-outsourced">Is Customer Service handled In House or outsourced? If
-        outsourced with whom?</label>
 
-        <input type="text" name="customer-service-house-outsourced" id="input-customer-service-house-outsourced">
 
-        <label for="label-customer-service-outsourced">If Customer Service is outsourced, has anyone from your company
-          visited the customer service facility? Will there be impromptu visits to the call center going
-          forward?</label>
+        <div class="form-group">
+          <label for="mrcCustomerSourced">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-sourced" id="mrcCustomerSourced">
+        </div>
+        <div class="form-group">
+          <label for="mrcCustomerOutsourced">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-outsourced" id="mrcCustomerOutsourced">
+        </div>
 
-        <input type="text" name="customer-service-outsourced" id="input-customer-service-outsourced">
+        <div class="form-group">
+          <label for="mrcCustomerTraining">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-training" id="mrcCustomerTraining">
+        </div>
 
-        <label for="label-customer-service-training">Has anyone from your company participated in the training of the
-          customer service staff?</label>
+        <div class="form-group">
+          <label for="mrcCustomerServiceSource">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-service-source" id="mrcCustomerServiceSource">
+        </div>
 
-        <input type="text" name="customer-service-training" id="input-customer-service-training">
+        <div class="form-group">
+          <label for="mrcCustomerServiceHours">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-service-hours" id="mrcCustomerServiceHours">
+        </div>
 
-        <label for="label-customer-service-house">If Customer Service handled In House, how many customer service reps
-          are on staff?</label>
+        <div class="form-group">
+          <label for="mrcCustomerReturns">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-returns" id="mrcCustomerReturns">
+        </div>
 
-        <input type="text" name="customer-service-house" id="input-customer-service-house">
+        <div class="form-group">
+          <label for="mrcCustomerFulfillment">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-fulfillment" id="mrcCustomerFulfillment">
+        </div>
 
-        <label for="label-customer-service-houses">What are your customer service hours?</label>
+        <div class="form-group">
+          <label for="mrcCustomerCommunication">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-communication" id="mrcCustomerCommunication">
+        </div>
 
-        <input type="text" name="customer-service-houses" id="input-customer-service-houses">
+        <div class="form-group">
+          <label for="mrcCustomerQualityControl">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-quality-control" id="mrcCustomerQualityControl">
+        </div>
+        <div class="form-group">
+          <label for="mrcCustomerCardStatement">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-card-statement" id="mrcCustomerCardStatement">
+        </div>
 
-        <label for="label-returns-chargebacks">Who is handling returns/chargebacks?
-        </label>
+        <div class="form-group">
+          <label for="mrcCustomerBankStatement">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
+          <input type="text" name="mrc-customer-bank-statement" id="mrcCustomerBankStatement">
+        </div>
 
-        <input type="text" name="returns-chargebacks" id="input-returns-chargebacks">
 
-        <label for="label-automated-customer-credit">If applicable, is the fulfillment center automated to credit
-          customers for returned or refused shipments?</label>
-
-        <input type="text" name="automated-customer-credit" id="input-automated-customer-credit">
-
-        <label for="label-fulfillment-center-communication">How does the fulfillment center communicate with you and
-          vice versa?</label>
-
-        <input type="text" name="fulfillment-center-communication" id="input-fulfillment-center-communication">
-
-        <label for="label-quaility-control">Do you have a quality control process in place to review orders on a
-          regular basis in whole or in a sample set?</label>
-
-        <input type="text" name="quaility-control" id="input-quaility-control">
-
-        <label for="label-customer-service-name">What is the customer service number you would like to have show up on
-          card holders statements?</label>
-
-        <input type="text" name="customer-service-name" id="input-customer-service-name">
-
-        <label for="label-customer-bankstatement-description">How do you want the description to read on customer's
-          bank statements? (22 characters max, includes spaces)</label>
-
-        <input type="text" name="customer-bankstatement-description" id="input-customer-bankstatement-description">
-
-        <label for="label-signature">Signature</label>
-
+        <div class="form-group">
+          <label for="mrcCustomerSignature">Signature</label>
+          <textarea name="mrc-customer-signature" id="mrcCustomerSignature" cols="30" rows="10">
+          Signature Area
+        </textarea>
+        </div>
       </div>
 
       <div class="form-box">

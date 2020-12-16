@@ -92,35 +92,15 @@ $mrcCampaignDescribeProduct = $_POST['mrc-campaign-describe-product'];
 $mrcCampaignProductSold= $_POST['mrc-campaign-product-sold'];
 $mrcCampaignPricePoint = $_POST['mrc-campaign-price-point'];
 $mrcCampaignProductFrontBack = $_POST['mrc-compaign-product-front-back'];
-$mrcCampaign
-$mrcCampaign
-$mrcCampaign
-$mrcCampaign
-$mrcCampaign
-$mrcCampaign
-$mrcCampaign
+$mrcCampaignCrossProduct = $_POST['mrc-campaign-cross-product'];
+$mrcCampaignProductFreeTrial = $_POST['mrc-campaign-product-free-trial'];
+$mrcCampaignProductBilling = $_POST['mrc-campaign-product-billing'];
+$mrcCampaignProductMarketing = $_POST['mrc-campaign-product-marketing'];
+$mrcCampaignMajorCPA = $_POST['mrc-campaign-major-cpa'];
+$mrcCampaignLeadQuality = $_POST['mrc-campaign-lead-quality'];
+$mrcCampaignProductWarrenty = $_POST['mrc-campaign-product-warrenty'];
+$mrcCampaignCustomerCancel = $_POST['mrc-campaign-custom-cancel'];
+$mrcCampaignFulfillmentSourcing = $_POST['mrc-campaign-fulfillment-sourcing']
 
-Describe the product/service being sold.
 
-How is the product/service ordered or purchased?
-
-What are the price points for the product/service?
-
-Is the product/service being sold through a Front End or as an upsell offer? With any upsell offers, please list all applicable Front/Back end partners with the product/service being sold.
-
-Is the product/service being cross sold with any other product/service? If yes, explain.
-
-Is there a free trial and/or auto ship program attached to the product/service?
-
-Is there recurring billing/continuity plan associated with the product/service?
-
-How is the product/service advertised, marketed, and/or promoted to support the projected volume/transaction estimates? (i.e. radio, print, affiliate networks, CPA, publishers, and/or other sources to support the transaction count per day)
-List all major affiliates (sub affiliates), CPA’s, and publishers used to generate sales.
-
-How do you track affiliate sales and monitor for lead quality?
-What is the warranty, return, and refund policy?
-
-How can a customer cancel from Auto Ship/Bill and/or continuity program?
-
-Is fulfillment handled In House or outsourced? If outsourced, with whom?
 

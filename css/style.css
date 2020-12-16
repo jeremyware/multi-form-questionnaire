@@ -7,10 +7,22 @@ body {
   margin: 0 auto;
 }
 
-#second,
-#third,
-#fourth,
-#fifth {
+#rtlPq2,
+#rtlPq3,
+#rtlPq4 {
+  display: none;
+}
+
+
+#mrcPq2,
+#mrcPq3,
+#mrcPq4,
+#mrcPq5,
+#mrcPq6,
+#mrcPq7,
+#mrcPq8,
+#mrcPq9,
+#mrcPq10 {
   display: none;
 }
 
@@ -24,7 +36,14 @@ p,
 label {
   font-family: 'Roboto', sans-serif;
   color: #111;
-  line-height: 24px;
+  line-height: 20px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+input {
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 
 h1 {

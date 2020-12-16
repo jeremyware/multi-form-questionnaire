@@ -13,7 +13,7 @@ include_once 'formnavigation.php';
           </div>
         </div>
         <form action="includes/retailsubmit.inc.php" method="post" id="form-data">
-          <div id="first">
+          <div id="rtlPq1">
             <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
             <div class="form-group">
               <label for="businessName">Business Name</label>
@@ -121,10 +121,10 @@ include_once 'formnavigation.php';
             </div>
             <br>
             <div class="form-group">
-              <a href="#" class="btn btn-danger" id="next-1">Next</a>
+              <a href="#" class="btn btn-danger" id="rtlBtnN1">Next</a>
             </div>
           </div>
-          <div id="second">
+          <div id="rtlPq2">
             <h4 class="text-center bg-primary p-1 rounded text-light">Business Profile</h4>
             <div class="form-group">
 
@@ -231,11 +231,11 @@ include_once 'formnavigation.php';
             </div>
             <br>
             <div class="form-group">
-              <a href="#" class="btn btn-danger" id="prev-2">Previous</a>
-              <a href="#" class="btn btn-danger" id="next-2">Next</a>
+              <a href="#" class="btn btn-danger" id="rtlBtnP2">Previous</a>
+              <a href="#" class="btn btn-danger" id="rtlBtnN2">Next</a>
             </div>
           </div>
-          <div id="third">
+          <div id="rtlPq3">
             <h4 class="text-center bg-primary p-1 rounded text-light">Owner Information</h4>
             <fieldset id="primaryOwner">
               <div class="form-group">
@@ -475,11 +475,11 @@ include_once 'formnavigation.php';
             </fieldset>
             <br>
             <div class="form-group">
-              <a href="#" class="btn btn-danger" id="prev-3">Previous</a>
-              <a href="#" class="btn btn-danger" id="next-3">Next</a>
+              <a href="#" class="btn btn-danger" id="rtlBtnP3">Previous</a>
+              <a href="#" class="btn btn-danger" id="rtlBtnN3">Next</a>
             </div>
           </div>
-          <div id="fourth">
+          <div id="rtlPq4">
             <h4 class="text-center bg-primary p-1 rounded text-light">Product Info</h4>
             <div class="form-group">
               <label for="productDescription">Briefly describe product/service being sold:</label>
@@ -532,73 +532,21 @@ include_once 'formnavigation.php';
             </fieldset>
             <br>
             <div class="form-group">
-              <a href="#" class="btn btn-danger" id="prev-4">Previous</a>
-              <!-- <a href="#" class="btn btn-danger" id="next-4">Next</a> -->
+              <a href="#" class="btn btn-danger" id="rtlBtnP4">Previous</a>
               <input type="submit" name="submit" value="Submit" id="submit" class="btn btn-success" />
 
             </div>
           </div>
-          <div id="fifth">
-            <fieldset>
-              <h1>Confirmation Customer Info</h1>
-              <br>
-              <p>Thank you for submitting this form.
-                <br>
-                <p>We have successfully received it.
-                  <br>
-                  <p>Below is a summary of the information you provided.<br><br>
-                    <?php
-                    if (isset($_GET("#form-data"))) {
-                      echo 'Business Name: ' . $_POST["businessName"] . '<br>';
-                      echo 'Street Address: ' . $_POST["companyStreet"] . '<br>';
-                      echo 'Street Address Line 2: ' . $_POST["companyStreetLine2"] . '<br>';
-                      echo 'State: ' . $_POST["companyState"] . '<br>';
-                      echo 'City: ' . $_POST["companyCity"] . '<br>';
-                      echo 'Zipcode: ' . $_POST["companyZip"] . '<br>';
-                      echo 'Company Phone Number: ' . $_POST["companyPhoneNumber"] . '<br>';
-                      echo 'Company Website: ' . $_POST["companyWebsiteUrl"] . '<br>';
-                      echo 'Contact First Name: ' . $_POST["contactFirstName"] . '<br>';
-                      echo 'Contact Last Name: ' . $_POST["contactLastName"] . '<br>';
-                      echo 'Business Structure: ' . $_POST["businessStructure"] . '<br>';
-                      echo 'Business Structure: ' . $_POST["businessStructureOther"] . '<br>';
-                      echo 'Federal Tax ID: ' . $_POST["federalTaxId"] . '<br>';
-                      echo 'Date Business Created: ' . $_POST["businessDateFormed"] . '<br>';
-                      echo 'State Business Created: ' . $_POST["businessStateCreated"] . '<br>';
-                      echo 'First Name: ' . $_POST["ownerFirstName"] . '<br>';
-                      echo 'Last Name: ' . $_POST["ownerLastName"] . '<br>';
-                      echo 'Title: ' . $_POST["ownerTitle"] . '<br>';
-                      echo 'Ownership Age: ' . $_POST["ownerAge"] . '<br>';
-                      echo 'Social Security Number: ' . $_POST["ownerSocial"] . '<br>';
-                      echo 'Date of Birth: ' . $_POST["ownerDateOfBirth"] . '<br>';
-                      echo 'Street Address: ' . $_POST["ownerCompanyAddress"] . '<br>';
-                      echo 'Street Address Line 2: ' . $_POST["ownerCompanyAddressLine2"] . '<br>';
-                      echo 'City: ' . $_POST["ownerCompanyCity"] . '<br>';
-                      echo 'State: ' . $_POST["ownerCompanyState"] . '<br>';
-                      echo 'Zipecode: ' . $_POST["ownerCompanyZip"] . '<br>';
-                      echo 'Driver\'s License Number: ' . $_POST["ownerCompanyDriversLicense"] . '<br>';
-                      echo 'Product Description: ' . $_POST["product-radio-container"] . '<br>';
-                      echo 'Projected Annual Volume: ' . $_POST["productAnnualVolume"] . '<br>';
-                      echo 'Average Ticket: ' . $_POST["productAverageTicket"] . '<br>';
-                      echo 'High Ticket: ' . $_POST["productHighTicket"] . '<br>';
-                      echo 'Transaction Type: ' . $_POST["transactionType"] . '<br>';
-                      echo "<form action='includes/retailsubmit.inc.php' method='post'>";
-                      echo '<a href="#" class="btn btn-danger" id="prev-5">Previous</a>';
-                      echo "<input type='submit' name='submit' value='Submit' id='submit' class='btn btn-success'>";
-                    } else {
-                      die();
-                    }
-                    ?>
-            </fieldset>
-          </div>
       </div>
-      </form>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script>
 
-    </script>
+  </script>
 
-    <?php
-    include_once 'footer.php';
-    ?>
+  <?php
+  include_once 'footer.php';
+  ?>

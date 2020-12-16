@@ -104,6 +104,6 @@ if (isset($_POST["submit"])) {
   $transactionType
  );
 } else {
- header("location: ../index.php?reviewform");
+ header("location: ../retailquestionnaire.php?reviewform");
  exit();
 }
