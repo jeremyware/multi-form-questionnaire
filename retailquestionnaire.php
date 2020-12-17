@@ -6,7 +6,7 @@ include_once 'formnavigation.php';
 <div class="bg-light">
   <div class="container shadow-lg p-3 mb-5 bg-white rounded">
     <div class="row justify-content-center ">
-      <div class="col-md-6 bg-light p-4 rounded mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="col-md-8 bg-light p-4 rounded mt-5 shadow-lg p-3 mb-5 bg-white rounded">
         <div class="progress mb-3" style="height:20px;">
           <div class="progress-bar bg-danger" role="progressbar" style="width:15%;" id="progressBar">
             <b class="lead" id="progressText"></b>

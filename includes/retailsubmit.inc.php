@@ -51,12 +51,12 @@ if (isset($_POST["submit"])) {
  $transactionType = $_POST['transactiontype-radio'];
 
 
- if (bidExists($conn, $businessName) !== false) {
+ if (rtlbidExists($conn, $businessName) !== false) {
   header("location: ../retailquestionnaire.php?error=businessidtaken");
   exit();
  }
 
- createBusiness(
+ createRtlForm(
   $conn,
   $businessName,
   $companyStreet,

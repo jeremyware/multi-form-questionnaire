@@ -12,13 +12,13 @@ include_once 'formnavigation.php';
                         <b class="lead" id="progressText"></b>
                     </div>
                 </div>
-                <form action="includes/retailsubmit.inc.php" method="post" id="form-data">
+                <form action="includes/merchantsubmit.inc.php" method="post" id="form-data">
                     <div id="mrcPq1">
                         <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
                         <br>
                         <div class="form-group">
-                            <label for="businessName">Business Name</label>
-                            <input class="form-control" type="text" name="businessname" id="businessName" required />
+                            <label for="mrcBusinessName">Business Name</label>
+                            <input class="form-control" type="text" name="mrc-businessname" id="mrcBusinessName" required />
                         </div>
                         <div class="form-group">
                             <label for="mrcBusinessStreet">Location Address</label>

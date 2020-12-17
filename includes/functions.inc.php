@@ -124,9 +124,9 @@ function loginUser($conn, $username, $pwd)
 		exit();
 	}
 }
-// Creating business form section
+// Creating retail questionnaire form
 
-function bidExists($conn, $businessName)
+function rtlbidExists($conn, $businessName)
 {
 	$sql = "SELECT businessName FROM PlatinumPaymentRetailInfo WHERE businessName = ? ";
 	$stmt = mysqli_stmt_init($conn);
@@ -153,7 +153,7 @@ function bidExists($conn, $businessName)
 	mysqli_stmt_close($stmt);
 }
 
-function createBusiness(
+function createRtlForm(
 	$conn,
 	$businessName,
 	$companyStreet,
@@ -262,5 +262,298 @@ function createBusiness(
 	mysqli_stmt_close($stmt);
 	mysqli_close($conn);
 	header("location: ../index.php?error=none");
+	exit();
+}
+
+// Creating merch questionnaire form
+
+function mrcBidExists($conn, $mrcBusinessName)
+{
+	$sql = "SELECT businessName FROM PlatPayMerchForm WHERE mrcBusinessName = ? ";
+	$stmt = mysqli_stmt_init($conn);
+
+	if (!mysqli_stmt_prepare($stmt, $sql)) {
+		echo "Error:\n";
+		print_r($stmt->error_list);
+		echo "Error:\n";
+		print_r($conn->error_list);
+		exit();
+	}
+	mysqli_stmt_bind_param($stmt, "s", $mrcBusinessName);
+	mysqli_stmt_execute($stmt);
+
+	$resultData = mysqli_stmt_get_result($stmt);
+
+	if ($row = mysqli_fetch_assoc($resultData)) {
+		return $row;
+	} else {
+		$result = false;
+		return $result;
+	}
+
+	mysqli_stmt_close($stmt);
+}
+
+function createMrcQuestionnaire(
+	$conn,
+	$mrcBusinessName,
+	$mrcBusinessStreetAdd,
+	$mrcBusinessStreetAdd2,
+	$mrcBusinessCity,
+	$mrcBusinessState,
+	$mrcBusinessZip,
+	$mrcBusinessLegalName,
+	$mrcBusinessMailingRadio,
+	$mrcBusinessPhoneNumber,
+	$mrcBusinessFaxNumber,
+	$mrcCustomerServiceNumber,
+	$mrcBusinessSite,
+	$mrcContactPerson,
+	$mrcBusinessEmail,
+	$mrcProfileStructure,
+	$mrcProfileFederalTaxId,
+	$mrcProfileDateCreated,
+	$mrcProfileState,
+	$mrcProfileNumberOfEmployees,
+	$mrcProfileTradeReference1,
+	$mrcProfileContactName1,
+	$mrcProfileContactNumber1,
+	$mrcProfileTradeReference2,
+	$mrcProfileContactName2,
+	$mrcProfileContactNumber2,
+	$mrcOwnerPrimaryName,
+	$mrcOwnerTitle,
+	$mrcOwnershipAge,
+	$mrcOwnerSocial,
+	$mrcOwnerDateOfBirth,
+	$mrcOwnerMobileNumber,
+	$mrcOwnerStreetAddress,
+	$mrcOwnerStreetAddress2,
+	$mrcOwnerCity,
+	$mrcOwnerState,
+	$mrcOwnerZip,
+	$mrcOwnerDriversLicense,
+	$mrcOwnerStateId,
+	$mrcOwnerYearResidence,
+	$mrcSecondOwnerName,
+	$mrcSecondOwnerTitle,
+	$mrcSecondOwnershipAge,
+	$mrcSecondOwnerSocial,
+	$mrcSecondOwnerDateOfBirth,
+	$mrcSecondOwnerMobileNumber,
+	$mrcSecondOwnerStreetAddress,
+	$mrcSecondOwnerStreetAddress2,
+	$mrcSecondOwnerCity,
+	$mrcSecondOwnerState,
+	$mrcSecondOwnerZip,
+	$mrcSecondOwnerDriversLicense,
+	$mrcSecondOwnerStateId,
+	$mrcSecondOwnerYearResidence,
+	$mrcSiteOfficeStructure,
+	$mrcSiteFloorOccupy,
+	$mrcSiteApproxSqFt,
+	$mrcSiteBuildingZone,
+	$mrcSiteOwnLease,
+	$mrcProductProjectVolume,
+	$mrcProductAverageTicket,
+	$mrcProductHighTicket,
+	$mrcProductTicketDescription,
+	$mrcProductDescribeService,
+	$mrcProductRefundPolicy,
+	$mrcProductTransactionType,
+	$mrcProductCardSwipe,
+	$mrcProductMailTelephone,
+	$mrcProductInternetEcommerce,
+	$mrcProductConsumerSales,
+	$mrcProductBusinessSales,
+	$mrcAccountAcceptVMCD,
+	$mrcAccountAcceptAmex,
+	$mrcAccountNoAmex,
+	$mrcAccountCurrentProcessor,
+	$mrcAccountGateway,
+	$mrcAccountTerminated,
+	$mrcBankName,
+	$mrcBankAddress,
+	$mrcBankPhoneNumber,
+	$mrcBankContactName,
+	$mrcBankAccount,
+	$mrcBankRouting,
+	$mrcBankCheckingSaving,
+	$mrcCampaignDescribeProduct,
+	$mrcCampaignProductSold,
+	$mrcCampaignPricePoint,
+	$mrcCampaignProductFrontBack,
+	$mrcCampaignCrossProduct,
+	$mrcCampaignProductFreeTrial,
+	$mrcCampaignProductBilling,
+	$mrcCampaignProductMarketing,
+	$mrcCampaignMajorCPA,
+	$mrcCampaignLeadQuality,
+	$mrcCampaignProductWarrenty,
+	$mrcCampaignCustomerCancel,
+	$mrcFulfillmentSourcing,
+	$mrcFulfillmentShipment,
+	$mrcFulfillmentManufactures,
+	$mrcFulfillmentProductsSold,
+	$mrcFulfillmentUnitsPerDay,
+	$mrcFulfillmentProductStock,
+	$mrcFulfillmentInventoryReport,
+	$mrcFulfillmentShippedTime,
+	$mrcFulfillmentOrderInfo,
+	$mrcFulfillmentProcessTime,
+	$mrcFulfillmentProductAvailability,
+	$mrcFulfillmentProductBackOrder,
+	$mrcCustomerSourced,
+	$mrcCustomerOutsourced,
+	$mrcCustomerTraining,
+	$mrcCustomerServiceSource,
+	$mrcCustomerServiceHours,
+	$mrcCustomerReturns,
+	$mrcCustomerFulfillment,
+	$mrcCustomerCommunication,
+	$mrcCustomerQualityControl,
+	$mrcCustomerCardStatement,
+	$mrcCustomerBankStatement,
+	$mrcCustomerSignature
+) {
+	$sql = "INSERT Into PlatPayMerchForm(
+mrcBusinessName, mrcBusinessStreetAdd, mrcBusinessStreetAdd2, mrcBusinessCity, mrcBusinessState, mrcBusinessZip, mrcBusinessLegalName, mrcBusinessMailingRadio, mrcBusinessPhoneNumber, mrcBusinessFaxNumber, mrcCustomerServiceNumber, mrcBusinessSite, mrcContactPerson, mrcBusinessEmail, mrcProfileStructure, mrcProfileFederalTaxId, mrcProfileDateCreated, mrcProfileState, mrcProfileNumberOfEmployees, mrcProfileTradeReference1, mrcProfileContactName1, mrcProfileContactNumber1, mrcProfileTradeReference2, mrcProfileContactName2, mrcProfileContactNumber2, mrcOwnerPrimaryName, mrcOwnerTitle, mrcOwnershipAge, mrcOwnerSocial, mrcOwnerDateOfBirth, mrcOwnerMobileNumber, mrcOwnerStreetAddress, mrcOwnerStreetAddress2, mrcOwnerCity, mrcOwnerState, mrcOwnerZip, mrcOwnerDriversLicense, mrcOwnerStateId, mrcOwnerYearResidence, mrcSecondOwnerName, mrcSecondOwnerTitle, mrcSecondOwnershipAge, mrcSecondOwnerSocial, mrcSecondOwnerDateOfBirth, mrcSecondOwnerMobileNumber, mrcSecondOwnerStreetAddress, mrcSecondOwnerStreetAddress2, mrcSecondOwnerCity, mrcSecondOwnerState, mrcSecondOwnerZip, mrcSecondOwnerDriversLicense, mrcSecondOwnerStateId, mrcSecondOwnerYearResidence, mrcSiteOfficeStructure, mrcSiteFloorOccupy, mrcSiteApproxSqFt, mrcSiteBuildingZone, mrcSiteOwnLease, mrcProductProjectVolume, mrcProductAverageTicket, mrcProductHighTicket, mrcProductTicketDescription, mrcProductDescribeService, mrcProductRefundPolicy, mrcProductTransactionType, mrcProductCardSwipe, mrcProductMailTelephone, mrcProductInternetEcommerce, mrcProductConsumerSales, mrcProductBusinessSales, mrcAccountAcceptVMCD, mrcAccountAcceptAmex, mrcAccountNoAmex, mrcAccountCurrentProcessor, mrcAccountGateway, mrcAccountTerminated, mrcBankName, mrcBankAddress, mrcBankPhoneNumber, mrcBankContactName, mrcBankAccount, mrcBankRouting, mrcBankCheckingSaving, mrcCampaignDescribeProduct, mrcCampaignProductSold, mrcCampaignPricePoint, mrcCampaignProductFrontBack, mrcCampaignCrossProduct, mrcCampaignProductFreeTrial, mrcCampaignProductBilling, mrcCampaignProductMarketing, mrcCampaignMajorCPA, mrcCampaignLeadQuality,mrcCampaignProductWarrenty, mrcCampaignCustomerCancel, mrcFulfillmentSourcing, mrcFulfillmentShipment, mrcFulfillmentManufactures, mrcFulfillmentProductsSold, mrcFulfillmentUnitsPerDay, mrcFulfillmentProductStock, mrcFulfillmentInventoryReport, mrcFulfillmentShippedTime,mrcFulfillmentOrderInfo, mrcFulfillmentProcessTime, mrcFulfillmentProductAvailability, mrcFulfillmentProductBackOrder, mrcCustomerSourced, mrcCustomerOutsourced, mrcCustomerTraining, mrcCustomerServiceSource, mrcCustomerServiceHours, mrcCustomerReturns, mrcCustomerFulfillment, mrcCustomerCommunication, mrcCustomerQualityControl, mrcCustomerCardStatement, mrcCustomerBankStatement, mrcCustomerSignature) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);";
+
+	$stmt = mysqli_stmt_init($conn);
+	if (!mysqli_stmt_prepare($stmt, $sql)) {
+		header("location: ../merchantquestionnaire.php?error=stmtfailed");
+		exit();
+	}
+
+
+	mysqli_stmt_bind_param(
+		$stmt,
+		"sssssissiiissssissississisiiisissssisssssiisissssissssssssiiisssssssssssssssssiiiisssisssssssssssssssssssssssssssssssss",
+		$conn,
+		$mrcBusinessName,
+		$mrcBusinessStreetAdd,
+		$mrcBusinessStreetAdd2,
+		$mrcBusinessCity,
+		$mrcBusinessState,
+		$mrcBusinessZip,
+		$mrcBusinessLegalName,
+		$mrcBusinessMailingRadio,
+		$mrcBusinessPhoneNumber,
+		$mrcBusinessFaxNumber,
+		$mrcCustomerServiceNumber,
+		$mrcBusinessSite,
+		$mrcContactPerson,
+		$mrcBusinessEmail,
+		$mrcProfileStructure,
+		$mrcProfileFederalTaxId,
+		$mrcProfileDateCreated,
+		$mrcProfileState,
+		$mrcProfileNumberOfEmployees,
+		$mrcProfileTradeReference1,
+		$mrcProfileContactName1,
+		$mrcProfileContactNumber1,
+		$mrcProfileTradeReference2,
+		$mrcProfileContactName2,
+		$mrcProfileContactNumber2,
+		$mrcOwnerPrimaryName,
+		$mrcOwnerTitle,
+		$mrcOwnershipAge,
+		$mrcOwnerSocial,
+		$mrcOwnerDateOfBirth,
+		$mrcOwnerMobileNumber,
+		$mrcOwnerStreetAddress,
+		$mrcOwnerStreetAddress2,
+		$mrcOwnerCity,
+		$mrcOwnerState,
+		$mrcOwnerZip,
+		$mrcOwnerDriversLicense,
+		$mrcOwnerStateId,
+		$mrcOwnerYearResidence,
+		$mrcSecondOwnerName,
+		$mrcSecondOwnerTitle,
+		$mrcSecondOwnershipAge,
+		$mrcSecondOwnerSocial,
+		$mrcSecondOwnerDateOfBirth,
+		$mrcSecondOwnerMobileNumber,
+		$mrcSecondOwnerStreetAddress,
+		$mrcSecondOwnerStreetAddress2,
+		$mrcSecondOwnerCity,
+		$mrcSecondOwnerState,
+		$mrcSecondOwnerZip,
+		$mrcSecondOwnerDriversLicense,
+		$mrcSecondOwnerStateId,
+		$mrcSecondOwnerYearResidence,
+		$mrcSiteOfficeStructure,
+		$mrcSiteFloorOccupy,
+		$mrcSiteApproxSqFt,
+		$mrcSiteBuildingZone,
+		$mrcSiteOwnLease,
+		$mrcProductProjectVolume,
+		$mrcProductAverageTicket,
+		$mrcProductHighTicket,
+		$mrcProductTicketDescription,
+		$mrcProductDescribeService,
+		$mrcProductRefundPolicy,
+		$mrcProductTransactionType,
+		$mrcProductCardSwipe,
+		$mrcProductMailTelephone,
+		$mrcProductInternetEcommerce,
+		$mrcProductConsumerSales,
+		$mrcProductBusinessSales,
+		$mrcAccountAcceptVMCD,
+		$mrcAccountAcceptAmex,
+		$mrcAccountNoAmex,
+		$mrcAccountCurrentProcessor,
+		$mrcAccountGateway,
+		$mrcAccountTerminated,
+		$mrcBankName,
+		$mrcBankAddress,
+		$mrcBankPhoneNumber,
+		$mrcBankContactName,
+		$mrcBankAccount,
+		$mrcBankRouting,
+		$mrcBankCheckingSaving,
+		$mrcCampaignDescribeProduct,
+		$mrcCampaignProductSold,
+		$mrcCampaignPricePoint,
+		$mrcCampaignProductFrontBack,
+		$mrcCampaignCrossProduct,
+		$mrcCampaignProductFreeTrial,
+		$mrcCampaignProductBilling,
+		$mrcCampaignProductMarketing,
+		$mrcCampaignMajorCPA,
+		$mrcCampaignLeadQuality,
+		$mrcCampaignProductWarrenty,
+		$mrcCampaignCustomerCancel,
+		$mrcFulfillmentSourcing,
+		$mrcFulfillmentShipment,
+		$mrcFulfillmentManufactures,
+		$mrcFulfillmentProductsSold,
+		$mrcFulfillmentUnitsPerDay,
+		$mrcFulfillmentProductStock,
+		$mrcFulfillmentInventoryReport,
+		$mrcFulfillmentShippedTime,
+		$mrcFulfillmentOrderInfo,
+		$mrcFulfillmentProcessTime,
+		$mrcFulfillmentProductAvailability,
+		$mrcFulfillmentProductBackOrder,
+		$mrcCustomerSourced,
+		$mrcCustomerOutsourced,
+		$mrcCustomerTraining,
+		$mrcCustomerServiceSource,
+		$mrcCustomerServiceHours,
+		$mrcCustomerReturns,
+		$mrcCustomerFulfillment,
+		$mrcCustomerCommunication,
+		$mrcCustomerQualityControl,
+		$mrcCustomerCardStatement,
+		$mrcCustomerBankStatement,
+		$mrcCustomerSignature
+	);
+
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+	mysqli_close($conn);
+	header("location: ../merchantquestionnaire.php?error=none");
 	exit();
 }
