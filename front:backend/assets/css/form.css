@@ -1,8 +1,15 @@
-#rtlPq2,
-#rtlPq3,
-#rtlPq4 {
+#rtlAPq2,
+#rtlAPq3,
+#rtlAPq4 {
  display: none;
 }
+
+#rtlUPq2,
+#rtlUPq3,
+#rtlUPq4 {
+ display: none;
+}
+
 
 
 #mrcPq2,

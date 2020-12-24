@@ -22,7 +22,7 @@ function loginUser($user)
  if ($_SESSION['admin']) {
   header('location:' . BASE_URL . '/admin/dashboard.php');
  } else {
-  header('location:' . BASE_URL . '/admin/forms/index.php');
+  header('location:' . BASE_URL . 'index.php');
  }
  exit();
 }

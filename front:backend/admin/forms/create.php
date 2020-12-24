@@ -30,10 +30,10 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
          <ul>
             <li><a href="<?php echo BASE_URL . 'admin/forms/index.php'; ?>">Manage Forms</a></li>
             <li><a href="<?php echo BASE_URL . 'admin/users/index.php'; ?>">Manage Users</a></li>
-            <li id="rtlNaVBi"><a href="#">Business Information</a></li>
-            <li id="rtlNavBp"><a href="#">Business Profile</a></li>
-            <li id="rtlNavOi"><a href="#">Owner Information</a></li>
-            <li id="rtlNavPi"><a href="#">Product Information</a></li>
+            <li id="rtlANaVBi"><a href="#">Business Information</a></li>
+            <li id="rtlANavBp"><a href="#">Business Profile</a></li>
+            <li id="rtlANavOi"><a href="#">Owner Information</a></li>
+            <li id="rtlANavPi"><a href="#">Product Information</a></li>
 
 
          </ul>
@@ -53,7 +53,7 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
                         </div>
                      </div>
                      <form action="create.php" method="POST" id="form-data">
-                        <div id="rtlPq1">
+                        <div id="rtlAPq1">
                            <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
                            <div class="form-group">
                               <label for="businessName">Business Name</label>
@@ -156,10 +156,10 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
                            <br>
                            <div class="form-group">
                               <a href="index.php" class="btn btn-secondary">Back</a>
-                              <a href="#" class="btn btn-danger" id="rtlBtnN1">Next</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnN1">Next</a>
                            </div>
                         </div>
-                        <div id="rtlPq2">
+                        <div id="rtlAPq2">
                            <h4 class="text-center bg-primary p-1 rounded text-light">Business Profile</h4>
                            <br>
                            <fieldset class="form-group">
@@ -254,11 +254,11 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
                            </div>
                            <br>
                            <div class="form-group">
-                              <a href="#" class="btn btn-danger" id="rtlBtnP2">Previous</a>
-                              <a href="#" class="btn btn-danger" id="rtlBtnN2">Next</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnP2">Previous</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnN2">Next</a>
                            </div>
                         </div>
-                        <div id="rtlPq3">
+                        <div id="rtlAPq3">
                            <h4 class="text-center bg-primary p-1 rounded text-light">Owner Information</h4>
                            <fieldset id="primaryOwner">
                               <div class="form-group">
@@ -480,11 +480,11 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
                            </fieldset>
                            <br>
                            <div class="form-group">
-                              <a href="#" class="btn btn-danger" id="rtlBtnP3">Previous</a>
-                              <a href="#" class="btn btn-danger" id="rtlBtnN3">Next</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnP3">Previous</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnN3">Next</a>
                            </div>
                         </div>
-                        <div id="rtlPq4">
+                        <div id="rtlAPq4">
                            <h4 class="text-center bg-primary p-1 rounded text-light">Product Info</h4>
                            <div class="form-group">
                               <label for="productDescription">Briefly describe product/service being sold:</label>
@@ -530,7 +530,7 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
                            </fieldset>
                            <br>
                            <div class="form-group">
-                              <a href="#" class="btn btn-danger" id="rtlBtnP4">Previous</a>
+                              <a href="#" class="btn btn-danger" id="rtlABtnP4">Previous</a>
                               <button type="submit" name="add-form" class="btn btn-big success">Submit</button>
                            </div>
                         </div>
@@ -546,7 +546,7 @@ include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
    <script src="../../assets/js/scripts.js"></script>
-   <script src="../../assets/js/forms.js"></script>
+   <script src="../../assets/js/adminForms.js"></script>
 </body>
 
 </html>

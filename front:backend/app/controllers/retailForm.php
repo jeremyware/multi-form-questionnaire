@@ -60,7 +60,15 @@ if (isset($_POST['add-form'])) {
  header('location: ' . BASE_URL . '/admin/forms/index.php');
  exit();
 }
+if (isset($_POST['add-form'])) {
+ unset($_POST['add-ftl-form']);
+ $rtlForm_id = create($table, $_POST);
+ $_SESSION['message'] = 'Form created Successfully';
+ $_SESSION['type'] = 'success';
 
+ header('location: ' . BASE_URL . '/admin/forms/index.php');
+ exit();
+}
 if (isset($_GET['id'])) {
  $id = $_GET['id'];
  $rtlForm = selectOne($table, ['id' => $id]);
@@ -130,7 +138,15 @@ if (isset($_POST['update-form'])) {
  header('location: ' . BASE_URL . '/admin/forms/index.php');
  exit();
 }
-
+if (isset($_POST['update-rtl-form'])) {
+ $id = $_POST['id'];
+ unset($_POST['update-form'], $_POST['id']);
+ $rtlForm_id = update($table, $id, $_POST);
+ $_SESSION['message'] = 'Form successfully updated';
+ $_SESSION['type'] = 'success';
+ header('location: ' . BASE_URL . '/admin/forms/index.php');
+ exit();
+}
 
 // if (isset($_POST['register-btn'])) {
 //  $errors = validateUsers($_POST);

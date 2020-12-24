@@ -44,15 +44,15 @@
 
     <table>
      <thead>
-      <th>SN</th>
-      <th>Title</th>
-      <th>Author</th>
+      <th></th>
+      <th><th>
+      <th></th>
       <th colspan="3">Action</th>
      </thead>
      <tbody>
       <tr>
        <td>1</td>
-       <td>This is the first post</td>
+       <td>first</td>
        <td></td>
        <td><a href="#" class="edit">edit</a></td>
        <td><a href="#" class="delete">delete</a></td>
@@ -60,7 +60,7 @@
       </tr>
       <tr>
        <td>2</td>
-       <td>This is the second post</td>
+       <td>second</td>
        <td></td>
        <td><a href="#" class="edit">edit</a></td>
        <td><a href="#" class="delete">delete</a></td>

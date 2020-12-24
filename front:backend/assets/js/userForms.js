@@ -1,35 +1,35 @@
 //  retail page control
 
 $(document).ready(function () {
-  $('#rtlNaVBi').click(function () {
-    $('#rtlPq1').show();
-    $("#rtlPq2").hide();
-    $("#rtlPq3").hide();
-    $("#rtlPq4").hide();
+  $('#rtlUNaVBi').click(function () {
+    $('#rtlUPq1').show();
+    $("#rtlUPq2").hide();
+    $("#rtlUPq3").hide();
+    $("#rtlUPq4").hide();
     $("#progressBar").css("width", "15%");
   });
 
-  $('#rtlNavBp').click(function () {
-    $('#rtlPq2').show();
-    $("#rtlPq1").hide();
-    $("#rtlPq3").hide();
-    $("#rtlPq4").hide();
+  $('#rtlUNavBp').click(function () {
+    $('#rtlUPq2').show();
+    $("#rtlUPq1").hide();
+    $("#rtlUPq3").hide();
+    $("#rtlUPq4").hide();
     $("#progressBar").css("width", "35%");
   });
 
-  $('#rtlNavOi').click(function () {
-    $('#rtlPq3').show();
-    $("#rtlPq1").hide();
-    $("#rtlPq2").hide();
-    $("#rtlPq4").hide();
+  $('#rtlUNavOi').click(function () {
+    $('#rtlUPq3').show();
+    $("#rtlUPq1").hide();
+    $("#rtlUPq2").hide();
+    $("#rtlUPq4").hide();
     $("#progressBar").css("width", "65%");
   });
 
-  $('#rtlNavPi').click(function () {
-    $('#rtlPq4').show();
-    $("#rtlPq3").hide();
-    $("#rtlPq2").hide();
-    $("#rtlPq1").hide();
+  $('#rtlUNavPi').click(function () {
+    $('#rtlUPq4').show();
+    $("#rtlUPq3").hide();
+    $("#rtlUPq2").hide();
+    $("#rtlUPq1").hide();
     $("#progressBar").css("width", "100%");
   });
 });
@@ -37,15 +37,15 @@ $(document).ready(function () {
 $(document).ready(function () {
 
 
-  $("#rtlBtnN1").click(function (e) {
+  $("#rtlUBtnN1").click(function (e) {
     e.preventDefault();
 
     if ($("#businessName").val() == '') {
       $("#businessNameError").html('* Required Field.');
       return false;
     } else {
-      $("#rtlPq2").show();
-      $("#rtlPq1").hide();
+      $("#rtlUPq2").show();
+      $("#rtlUPq1").hide();
       $("#progressBar").css("width", "35%");
       $("#progressText").html("");
     }
@@ -53,23 +53,23 @@ $(document).ready(function () {
 
   });
 
-  $("#rtlBtnN2").click(function () {
-    $("#rtlPq3").show();
-    $("#rtlPq2").hide();
+  $("#rtlUBtnN2").click(function () {
+    $("#rtlUPq3").show();
+    $("#rtlUPq2").hide();
     $("#progressBar").css("width", "65%");
     $("#progressText").html("");
   });
 
-  $("#rtlBtnN3").click(function () {
-    $("#rtlPq4").show();
-    $("#rtlPq3").hide();
+  $("#rtlUBtnN3").click(function () {
+    $("#rtlUPq4").show();
+    $("#rtlUPq3").hide();
     $("#progressBar").css("width", "100%");
     $("#progressText").html("");
   });
 
-  $("#rtlBtnN4").click(function () {
-    $("#rtlPq5").show();
-    $("#rtlPq4").hide();
+  $("#rtlUBtnN4").click(function () {
+    $("#rtlUPq5").show();
+    $("#rtlUPq4").hide();
     $("#progressBar").css("width", "100%");
     $("#progressText").html("");
   });
@@ -103,29 +103,29 @@ $(document).ready(function () {
 
 
 
-  $("#rtlBtnP2").click(function () {
-    $("#rtlPq2").hide();
-    $("#rtlPq1").show();
+  $("#rtlUBtnP2").click(function () {
+    $("#rtlUPq2").hide();
+    $("#rtlUPq1").show();
     $("#progressBar").css("width", "25%");
     $("#progressText").html("");
   });
-  $("#rtlBtnP3").click(function () {
-    $("#rtlPq3").hide();
-    $("#rtlPq2").show();
+  $("#rtlUBtnP3").click(function () {
+    $("#rtlUPq3").hide();
+    $("#rtlUPq2").show();
     $("#progressBar").css("width", "50%");
     $("#progressText").html("");
   });
 
-  $("#rtlBtnP4").click(function () {
-    $("#rtlPq4").hide();
-    $("#rtlPq3").show();
+  $("#rtlUBtnP4").click(function () {
+    $("#rtlUPq4").hide();
+    $("#rtlUPq3").show();
     $("#progressBar").css("width", "75%");
     $("#progressText").html("");
   });
 
-  //  $("#rtlBtnP5").click(function () {
-  //    $("#rtlpq5").hide();
-  //    $("#rtlpq4").show();
+  //  $("#rtlUBtnP5").click(function () {
+  //    $("#rtlUpq5").hide();
+  //    $("#rtlUpq4").show();
   //    $("#progressBar").css("width", "75%");
   //    $("#progressText").html("");
   //  });
@@ -297,8 +297,8 @@ $(document).ready(function () {
 //       $("#businessNameError").html('* Required Field.');
 //       return false;
 //     } else {
-//       $("#rtlpq2").show();
-//       $("#rtlpq1").hide();
+//       $("#rtlUpq2").show();
+//       $("#rtlUpq1").hide();
 //       $("#progressBar").css("width", "50%");
 //       $("#progressText").html("");
 //     }
@@ -307,49 +307,49 @@ $(document).ready(function () {
 //   });
 
 //   $("#next-2").click(function () {
-//     $("#rtlpq3").show();
-//     $("#rtlpq2").hide();
+//     $("#rtlUpq3").show();
+//     $("#rtlUpq2").hide();
 //     $("#progressBar").css("width", "75%");
 //     $("#progressText").html("");
 //   });
 
 //   $("#next-3").click(function () {
-//     $("#rtlpq4").show();
-//     $("#rtlpq3").hide();
+//     $("#rtlUpq4").show();
+//     $("#rtlUpq3").hide();
 //     $("#progressBar").css("width", "100%");
 //     $("#progressText").html("");
 //   });
 
 //   $("#next-4").click(function () {
-//     $("#rtlpq5").show();
-//     $("#rtlpq4s").hide();
+//     $("#rtlUpq5").show();
+//     $("#rtlUpq4s").hide();
 //     $("#progressBar").css("width", "100%");
 //     $("#progressText").html("");
 //   });
 
 //   $("#prev-2").click(function () {
-//     $("#rtlpq2").hide();
-//     $("#rtlpq1").show();
+//     $("#rtlUpq2").hide();
+//     $("#rtlUpq1").show();
 //     $("#progressBar").css("width", "25%");
 //     $("#progressText").html("");
 //   });
 //   $("#prev-3").click(function () {
-//     $("#rtlpq3").hide();
-//     $("#rtlpq2").show();
+//     $("#rtlUpq3").hide();
+//     $("#rtlUpq2").show();
 //     $("#progressBar").css("width", "50%");
 //     $("#progressText").html("");
 //   });
 
 //   $("#prev-4").click(function () {
-//     $("#rtlpq4").hide();
-//     $("#rtlpq3").show();
+//     $("#rtlUpq4").hide();
+//     $("#rtlUpq3").show();
 //     $("#progressBar").css("width", "50%");
 //     $("#progressText").html("");
 //   });
 
 //   //  $("#prev-5").click(function () {
-//   //    $("#rtlpq5").hide();
-//   //    $("#rtlpq4").show();
+//   //    $("#rtlUpq5").hide();
+//   //    $("#rtlUpq4").show();
 //   //    $("#progressBar").css("width", "75%");
 //   //    $("#progressText").html("");
 //   //  });
