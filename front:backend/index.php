@@ -37,7 +37,7 @@
    <div class="post-wrapper">
 
     <div class="post">
-     <h4><a href="retailForm.phpß">Retail Questionnaire</a></h4>
+     <h4><a href="public/retailForm.php">Retail Questionnaire</a></h4>
 
      <div class="post-info">
       <i class="far fa-user"> Platinum Payments</i>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="post">
-     <h4><a href="retailForm.phpß">Retail Questionnaire</a></h4>
+     <h4><a href="public/retailForm.php">Retail Questionnaire</a></h4>
 
      <div class="post-info">
       <i class="far fa-user"> Platinum Payments</i>
@@ -59,7 +59,7 @@
     <div class="post">
 
      <div class="post-info">
-      <h4><a href="retailForm.phpß">Retail Questionnaire</a></h4>
+      <h4><a href="/public/retailForm.php">Retail Questionnaire</a></h4>
 
       <i class="far fa-user"> Platinum Payments</i>
       &nbsp;

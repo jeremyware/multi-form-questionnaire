@@ -15,7 +15,7 @@
  <link rel="stylesheet" href="../assets/css/style.css">
  <link rel="stylesheet" href="../assets/css/admin.css">
  <link rel="stylesheet" href="../assets/css/form.css">
- <title>Merchant Questionnaire</title>
+ <title>Home</title>
 </head>
 
 <body>
@@ -27,12 +27,16 @@
 
   <div class="left-sidebar">
    <ul>
-    <li id="rtlUNaVBi"><a href="#">Business Information</a></li>
-    <li id="rtlUNavBp"><a href="#">Business Profile</a></li>
-    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlUNavPi"><a href="#">Product Information</a></li>
-
-
+    <li id="rtlNaVBi"><a href="#">Business Info</a></li>
+    <li id="rtlNavBp"><a href="#">Business Profile</a></li>
+    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlNavPi"><a href="#">Product Info</a></li>
+    <li id="rtlNaVBi"><a href="#">Business Info</a></li>
+    <li id="rtlNavBp"><a href="#">Business Profile</a></li>
+    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlNavPi"><a href="#">Product Info</a></li>
+    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlNavPi"><a href="#">Product Info</a></li>
    </ul>
   </div>
 
@@ -41,7 +45,7 @@
 
    <div class="content">
     <div class="wrapper">
-     <h2 class=" page-title">Merchant Questionnaire</h2>
+     <h2 class=" page-title">Retail Questionnaire</h2>
      <div class="row justify-content-center ">
       <div class="wrapper-container col-md-8 p-4 rounded mt-4 mb-5 bg-white rounde shadow-lg">
        <div class="progress mb-3" style="height:20px;">
@@ -49,8 +53,8 @@
          <b class="lead" id="progressText"></b>
         </div>
        </div>
-       <form action="includes/merchantsubmit.inc.php" method="post" id="form-data">
-        <div id="mrcPq1">
+       <form action="merchantForm.php" method="post" id="form-data">
+        <div id="mrcUPq1">
          <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
          <br>
          <div class="form-group">
@@ -178,7 +182,7 @@
          </div>
         </div>
 
-        <div id="mrcPq2">
+        <div id="mrcUPq2">
          <h4 class="text-center bg-primary p-1 rounded text-light">Business Profile</h4>
          <div class="form-group">
           <label for="mrcProfileStructure">Business Structure(corporation, LLC, Sole Prop, ect.)</label>
@@ -284,7 +288,7 @@
          </div>
         </div>
 
-        <div id="mrcPq3">
+        <div id="mrcUPq3">
          <h4 class="text-center bg-primary p-1 rounded text-light">Owner / Officer</h4>
          <fieldset id="primaryOwner">
           <div class="form-group">
@@ -527,7 +531,7 @@
          </div>
         </div>
 
-        <div id="mrcPq4">
+        <div id="mrcUPq4">
          <h4 class="text-center bg-primary p-1 rounded text-light">Site Survey</h4>
          <div class="form-group">
           <label for="mrcProductOfficeStructure">Office Structure (Office, Residential)</label>
@@ -553,7 +557,7 @@
          </div>
         </div>
 
-        <div id="mrcPq5">
+        <div id="mrcUPq5">
          <h4 class="text-center bg-primary p-1 rounded text-light">Product Price Information</h4>
 
          <div class="form-group">
@@ -625,7 +629,7 @@
          </div>
         </div>
 
-        <div id="mrcPq6">
+        <div id="mrcUPq6">
          <h4 class="text-center bg-primary p-1 rounded text-light">Current Account Profile</h4>
 
          <div class="form-group">
@@ -666,7 +670,7 @@
         </div>
 
 
-        <div id="mrcPq7">
+        <div id="mrcUPq7">
          <h4 class="text-center bg-primary p-1 rounded text-light">Bank Information</h4>
          <div class="form-group">
           <label for="mrcBankName">Bank Name
@@ -718,7 +722,7 @@
 
 
 
-        <div id="mrcPq8">
+        <div id="mrcUPq8">
          <h4 class="text-center bg-primary p-1 rounded text-light">Offer / Campaign Information</h4>
          <div class="form-group">
           <label for="mrcCampaignDescribeProduct">Describe the product/service being sold.</label>
@@ -786,7 +790,7 @@
          </div>
         </div>
 
-        <div id="mrcPq9">
+        <div id="mrcUPq9">
          <h4 class="text-center bg-primary p-1 rounded text-light">Fulfillment</h4>
 
          <div class="form-group">
@@ -891,7 +895,7 @@
          </div>
         </div>
 
-        <div id="mrcPq10">
+        <div id="mrcUPq10">
          <h4 class="text-center bg-primary p-1 rounded text-light">Customer Service</h4>
          <div class="form-group">
           <label for="mrcCustomerSourced">On average, how much product is maintained in stock, either in house or at your shipping facility?</label>
