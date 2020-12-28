@@ -1,5 +1,5 @@
 <?php include("../path.php"); ?>
-<?php include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/retailUserForm.php"); ?>
 
 
 <!DOCTYPE html>

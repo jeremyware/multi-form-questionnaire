@@ -54,10 +54,12 @@ $rtlForms = selectAll($table);
 if (isset($_POST['add-form'])) {
  unset($_POST['add-form']);
  $rtlForm_id = create($table, $_POST);
+ // dd($_POST);
+
  $_SESSION['message'] = 'Form created Successfully';
  $_SESSION['type'] = 'success';
 
- header('location: ' . BASE_URL . '/admin/forms/index.php');
+ header('location: ' . BASE_URL . '/index.php');
  exit();
 }
 if (isset($_GET['id'])) {
@@ -114,8 +116,10 @@ if (isset($_GET['id'])) {
 if (isset($_GET['del_id'])) {
  $id = $_GET['del_id'];
  $count = delete($table, $id);
+
  $_SESSION['message'] = 'Form successfully deleted';
  $_SESSION['type'] = 'warning';
+
  header('location: ' . BASE_URL . '/admin/forms/index.php');
  exit();
 }
@@ -126,7 +130,7 @@ if (isset($_POST['update-form'])) {
  $rtlForm_id = update($table, $id, $_POST);
  $_SESSION['message'] = 'Form successfully updated';
  $_SESSION['type'] = 'success';
- header('location: ' . BASE_URL . '/admin/forms/index.php');
+ header('location: ' . BASE_URL . '/index.php');
  exit();
 }
 

@@ -27,16 +27,16 @@
 
   <div class="left-sidebar">
    <ul>
-    <li id="rtlNaVBi"><a href="#">Business Info</a></li>
-    <li id="rtlNavBp"><a href="#">Business Profile</a></li>
-    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlNavPi"><a href="#">Product Info</a></li>
-    <li id="rtlNaVBi"><a href="#">Business Info</a></li>
-    <li id="rtlNavBp"><a href="#">Business Profile</a></li>
-    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlNavPi"><a href="#">Product Info</a></li>
-    <li id="rtlNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlNavPi"><a href="#">Product Info</a></li>
+    <li id="rtlUNaVBi"><a href="#">Business Info</a></li>
+    <li id="rtlUNavBp"><a href="#">Business Profile</a></li>
+    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlUNavPi"><a href="#">Product Info</a></li>
+    <li id="rtlUNaVBi"><a href="#">Business Info</a></li>
+    <li id="rtlUNavBp"><a href="#">Business Profile</a></li>
+    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlUNavPi"><a href="#">Product Info</a></li>
+    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
+    <li id="rtlUNavPi"><a href="#">Product Info</a></li>
    </ul>
   </div>
 
