@@ -1,113 +1,113 @@
 <?php
 
-function validateForm($form)
+function validateForm($rtlForm)
 {
 
- $errors = array();
+ $formErrors = array();
 
- if (empty($form['rtlBusinessName'])) {
-  array_push($errors, 'Name is required');
- }
-
- if (empty($form['rtlCompanyStreet'])) {
-  array_push($errors, 'Username is required');
+ if (empty($rtlForm['rtlBusinessName'])) {
+  array_push($formErrors, 'All fields required');
  }
 
- if (empty($form['rtlCompanyStreetLine2'])) {
-  array_push($errors, 'Email is required');
+ if (empty($rtlForm['rtlCompanyStreet'])) {
+  array_push($formErrors, 'All fields required');
  }
 
- if (empty($form['rtlCompanyCity'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlCompanyZip'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlCompanyPhoneNumber'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlCompanyWebsiteUrl'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlContactFirstName'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlContactLastName'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlBusinessStructurer'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlBusinessStructureOther'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlFederalTaxId'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlBusinessDateFormed'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlBusinessStateCreated'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerFirstName'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerLastName'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerTitle'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerAge'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerSocial'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerDateOfBirth'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyAddress'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyAddressLine2'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyCity'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyState'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyZip'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlOwnerCompanyDriversLicense'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlDescribeProductInfo'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlProductAnnualVolume'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlProductAverageTicket'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlProductHighTicket'])) {
-  array_push($errors, 'Password is required');
- }
- if (empty($form['rtlTransactionType'])) {
-  array_push($errors, 'Password is required');
+ if (empty($rtlForm['rtlCompanyStreetLine2'])) {
+  array_push($formErrors, 'Email is required');
  }
 
-
- $exstingForm = selectOne('PlatPayUsers', ['rtlBusinessName' => $form['rtlBusinessName']]);
- if (isset($exstingForm)) {
-  array_push($errors, 'Business Already Created');
+ if (empty($rtlForm['rtlCompanyCity'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlCompanyZip'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlCompanyPhoneNumber'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlCompanyWebsiteUrl'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlContactFirstName'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlContactLastName'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlBusinessStructurer'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlBusinessStructureOther'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlFederalTaxId'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlBusinessDateFormed'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlBusinessStateCreated'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerFirstName'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerLastName'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerTitle'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerAge'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerSocial'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerDateOfBirth'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyAddress'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyAddressLine2'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyCity'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyState'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyZip'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlOwnerCompanyDriversLicense'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlDescribeProductInfo'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlProductAnnualVolume'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlProductAverageTicket'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlProductHighTicket'])) {
+  array_push($formErrors, 'All fields are required');
+ }
+ if (empty($rtlForm['rtlTransactionType'])) {
+  array_push($formErrors, 'All fields are required');
  }
 
 
- return $errors;
+ $exstingForm = selectOne('PlatPayRetailForm', ['rtlBusinessName' => $rtlForm['rtlBusinessName']]);
+ if ($exstingForm) {
+  array_push($formErrors, 'Business Already Created');
+ }
+
+
+ return $formErrors;
 }

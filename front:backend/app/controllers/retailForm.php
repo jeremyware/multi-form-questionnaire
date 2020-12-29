@@ -1,5 +1,7 @@
 <?php
 include(ROOT_PATH . "/app/database/db.php");
+include(ROOT_PATH . "/app/helpers/validateForms.php");
+
 $table = 'PlatPayRetailForm';
 
 $id = '';
@@ -52,14 +54,20 @@ $rtlTransactionType = '';
 $rtlForms = selectAll($table);
 
 if (isset($_POST['add-form'])) {
+ $errors = validateForm($_POST);
+}
+
+if (isset($_POST['add-form'])) {
  unset($_POST['add-form']);
  $rtlForm_id = create($table, $_POST);
  $_SESSION['message'] = 'Form created Successfully';
  $_SESSION['type'] = 'success';
-
  header('location: ' . BASE_URL . '/admin/forms/index.php');
  exit();
 }
+
+
+
 if (isset($_GET['id'])) {
  $id = $_GET['id'];
  $rtlForm = selectOne($table, ['id' => $id]);
@@ -129,64 +137,3 @@ if (isset($_POST['update-form'])) {
  header('location: ' . BASE_URL . '/admin/forms/index.php');
  exit();
 }
-
-
-// if (isset($_POST['register-btn'])) {
-//  $errors = validateUsers($_POST);
-
-//  if (count($errors) === 0) {
-//   unset($_POST['register-btn'], $_POST['passwordConf']);
-//   $_POST['admin'] = 0;
-
-//   $form_id = createForms('PlatPayRetailForm', $_POST);
-//   $formInput = selectOne('PlatPayRetailForm', ['id' => $form_id]);
-
-//   dd($formInput);
-//  } else {
-//   $rtlBusinessName  = $_POST['rtlBusinessName'];
-//   $rtlCompanyStreet = $_POST['rtlCompanyStreet'];
-//   $rtlCompanyStreetLine2 = $_POST['rtlCompanyStreetLine2'];
-//   $rtlCompanyCity = $_POST['rtlCompanyCity'];
-//   $rtlCompanyState = $_POST['rtlCompanyState'];
-//   $rtlCompanyZip = $_POST['rtlCompanyZip'];
-//   $rtlCompanyPhoneNumber = $_POST['rtlCompanyPhoneNumber'];
-//   $rtlCompanyWebsiteUrl = $_POST['rtlCompanyWebsiteUrl'];
-//   $rtlContactFirstName = $_POST['rtlContactFirstName'];
-//   $rtlContactLastName = $_POST['rtlContactLastName'];
-//   $rtlBusinessStructure = $_POST['rtlBusinessStructure'];
-//   $rtlBusinessStructureOther = $_POST['rtlBusinessStructureOther'];
-//   $rtlFederalTaxId = $_POST['rtlFederalTaxId'];
-//   $rtlBusinessDateFormed = $_POST['rtlBusinessDateFormed'];
-//   $rtlBusinessStateCreated = $_POST['rtlBusinessStateCreated'];
-//   $rtlOwnerFirstName = $_POST['rtlOwnerFirstName'];
-//   $rtlOwnerLastName = $_POST['rtlOwnerLastName'];
-//   $rtlOwnerTitle = $_POST['rtlOwnerTitle'];
-//   $rtlOwnerAge = $_POST['rtlOwnerAge'];
-//   $rtlOwnerSocial = $_POST['rtlOwnerSocial'];
-//   $rtlOwnerDateOfBirth = $_POST['rtlOwnerDateOfBirth'];
-//   $rtlOwnerCompanyAddress = $_POST['rtlOwnerCompanyAddress'];
-//   $rtlOwnerCompanyAddressLine2 = $_POST['rtlOwnerCompanyAddressLine2'];
-//   $rtlOwnerCompanyCity = $_POST['rtlOwnerCompanyCity'];
-//   $rtlOwnerCompanyState = $_POST['rtlOwnerCompanyState'];
-//   $rtlOwnerCompanyZip = $_POST['rtlOwnerCompanyZip'];
-//   $rtlOwnerCompanyDriversLicense = $_POST['rtlOwnerCompanyDriversLicense'];
-//   $rtlSecondaryOwnersFirstName = $_POST['rtlSecondaryOwnersFirstName'];
-//   $rtlSecondaryOwnersLastName = $_POST['rtlSecondaryOwnersLastName'];
-//   $rtlSecondaryOwnerTitle = $_POST['rtlSecondaryOwnerTitle'];
-//   $rtlSecondaryOwnerAge = $_POST['rtlSecondaryOwnerAge'];
-//   $rtlSecondaryOwnerSocial = $_POST['rtlSecondaryOwnerSocial'];
-//   $rtlSecondaryOwnerDateOfBirth = $_POST['rtlSecondaryOwnerDateOfBirth'];
-//   $rtlSecondaryOwnerPhone = $_POST['rtlSecondaryOwnerPhone'];
-//   $rtlSecondaryOwnerAddress = $_POST['rtlSecondaryOwnerAddress'];
-//   $rtlSecondaryOwnerAddressLine2 = $_POST['rtlSecondaryOwnerAddressLine2'];
-//   $rtlSecondaryOwnerCity = $_POST['rtlSecondaryOwnerCity'];
-//   $rtlSecondaryOwnerState = $_POST['rtlSecondaryOwnerState'];
-//   $rtlSecondaryOwnerZip = $_POST['rtlSecondaryOwnerZip'];
-//   $rtlSecondaryOwnerDriversLicense = $_POST['rtlSecondaryOwnerDriversLicense'];
-//   $rtlDescribeProductInfo = $_POST['rtlDescribeProductInfo'];
-//   $rtlProductAnnualVolume = $_POST['rtlProductAnnualVolume'];
-//   $rtlProductAverageTicket = $_POST['rtlProductAverageTicket'];
-//   $rtlProductHighTicket = $_POST['rtlProductHighTicket'];
-//   $rtlTransactionType = $_POST['rtlTransactionType'];
-//  }
-// }

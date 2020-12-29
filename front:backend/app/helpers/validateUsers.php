@@ -26,13 +26,13 @@ function validateUsers($user)
  }
 
  $exstingUser = selectOne('PlatPayUsers', ['usersName' => $user['usersName']]);
- if (isset($exstingUser)) {
+ if ($exstingUser) {
   array_push($errors, 'Username taken');
  }
 
  $exstingEmail = selectOne('PlatPayUsers', ['usersEmail' => $user['usersEmail']]);
- if (isset($exstingEmail)) {
-  array_push($errors, 'Account already exists');
+ if ($exstingEmail) {
+  array_push($errors, 'Email taken');
  }
 
  return $errors;

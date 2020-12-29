@@ -12,15 +12,27 @@
 
 
 
-#mrcPq2,
-#mrcPq3,
-#mrcPq4,
-#mrcPq5,
-#mrcPq6,
-#mrcPq7,
-#mrcPq8,
-#mrcPq9,
-#mrcPq10 {
+#mrcUPq2,
+#mrcUPq3,
+#mrcUPq4,
+#mrcUPq5,
+#mrcUPq6,
+#mrcUPq7,
+#mrcUPq8,
+#mrcUPq9,
+#mrcUPq10 {
+ display: none;
+}
+
+#mrcAPq2,
+#mrcAPq3,
+#mrcAPq4,
+#mrcAPq5,
+#mrcAPq6,
+#mrcAPq7,
+#mrcAPq8,
+#mrcAPq9,
+#mrcAPq10 {
  display: none;
 }
 

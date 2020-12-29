@@ -38,9 +38,12 @@
 
 
     <div class="admin-content">
+
       <div class="content">
         <div class="wrapper">
-          <h2 class=" page-title">Update Form</h2>
+          <h2 class=" page-title">Retail Questionnaire</h2>
+          <!-- <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?> -->
+
           <div class="row justify-content-center ">
             <div class="wrapper-container col-md-8 p-4 rounded mt-4 mb-5 bg-white rounde shadow-lg">
               <div class="progress mb-3" style="height:20px;">
@@ -48,10 +51,12 @@
                   <b class="lead" id="progressText"></b>
                 </div>
               </div>
-              <form action="editrtl.php" method="POST" id="form-data">
-                <input type="hidden" name="rtl_id" value="<?php echo $rtl_id; ?>">
+              <form action="retailForm.php" method="POST" id="form-data">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+
                 <div id="rtlUPq1">
                   <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
+
                   <div class="form-group">
                     <label for="businessName">Business Name</label>
                     <input value="<?php echo $rtlBusinessName; ?>" type="text" name="rtlBusinessName" class="text-input" id="businessNameEdit">
@@ -536,7 +541,7 @@
                   <br>
                   <div class="form-group">
                     <a href="#" class="btn btn-danger" id="rtlUBtnP4">Previous</a>
-                    <button type="submit" name="update-rtl-form" class=" btn btn-big success">Update</button>
+                    <button type="submit" name="add-form" class="btn btn-big success">Submit</button>
                   </div>
                 </div>
               </form>
@@ -545,14 +550,16 @@
         </div>
       </div>
     </div>
-    <?php include(ROOT_PATH . "/app/includes/footer.php");
-    ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
-    <script src="../assets/js/scripts.js"></script>
-    <script src="../assets/js/adminForms.js"></script>
+  </div>
+  <?php include(ROOT_PATH . "/app/includes/footer.php");
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/userForms.js"></script>
+
 </body>
 
 </html>

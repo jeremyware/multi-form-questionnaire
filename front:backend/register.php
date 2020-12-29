@@ -27,7 +27,7 @@
     <form action="register.php" method="POST">
       <h2 class="form-title">Register</h2>
 
-      <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?>
+      <?php include(ROOT_PATH . "/app/helpers/userErrors.php"); ?>
 
       <div>
         <label>Full Name</label>

@@ -1,7 +1,7 @@
-<?php if (count($errors) > 0) : ?>
+<?php if (count($formErrors) > 0) : ?>
  <div class="msg error">
-  <?php foreach ($errors as $error) :  ?>
-   <li><?php echo $error; ?></li>
+  <?php foreach ($formErrors as $formError) :  ?>
+   <li><?php echo $formError; ?></li>
   <?php endforeach; ?>
  </div>
 <?php endif; ?>
