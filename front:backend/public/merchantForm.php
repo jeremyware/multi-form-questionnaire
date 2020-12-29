@@ -155,7 +155,7 @@
                   </div>
                   <div class="form-group">
                     <label for="mrcBusinessFaxNumber">Company Fax Number</label>
-                    <input class="text-input" type="text" nam="mrcBusinessPhoneNumber" id="mrcBusinessFaxNumber" placeholder="Company Fax Number" />
+                    <input class="text-input" type="text" name="mrcBusinessFaxNumber" id="mrcBusinessFaxNumber" placeholder="Company Fax Number" />
                   </div>
 
                   <div class="form-group">
@@ -267,7 +267,7 @@
                   </div>
                   <div class="form-group">
                     <label for="mrcProfileContactNumber1">Contact number (of reference 1)</label>
-                    <input class="text-input" type="text" name="mrcProfileContactNumber1 " id="$mrcProfileContactNumber1" />
+                    <input class="text-input" type="text" name="mrcProfileContactNumber1" id="$mrcProfileContactNumber1" />
                   </div>
                   <div class="form-group">
                     <label for="mrcProfileTradeReference2">Trade reference 2 - Business name</label>
@@ -296,7 +296,7 @@
                     </div>
                     <div class="form-group">
                       <label for="mrcOwnerTitle">Title</label>
-                      <input class="text-input" type="text" name="mrcOwnerTitle " id="mrcOwnerTitle" />
+                      <input class="text-input" type="text" name="mrcOwnerTitle" id="mrcOwnerTitle" />
                     </div>
 
                     <div class="form-goup">
@@ -428,7 +428,7 @@
                     </div>
                     <div class="form-group">
                       <label for="mrcSecondOwnerSocial">Social Security Number</label>
-                      <input class="text-input" type="text" id="mrcSecondOwnerSocial" name=mrcSecondOwnerSocial" placeholder="555-55-5555" pattern="\d{3}-?\d{2}-?\d{4}">
+                      <input class="text-input" type="text" id="mrcSecondOwnerSocial" name="mrcSecondOwnerSocial" placeholder="555-55-5555" pattern="\d{3}-?\d{2}-?\d{4}">
                     </div>
                     <div class="form-group">
                       <label for="mrcSecondOwnerDateOfBirth">Date of Birth</label>
@@ -740,7 +740,7 @@
 
                   <div class="form-group">
                     <label for="mrcCampaignProductFrontBack">Is the product/service being sold through a Front End or as an upsell offer? With any upsell offers, please list all applicable Front/Back end partners with the product/service being sold. </label>
-                    <input class="text-input" type="text" name="mrcCampaignProductFrontBack'" id="mrcCampaignProductFrontBack">
+                    <input class="text-input" type="text" name="mrcCampaignProductFrontBack" id="mrcCampaignProductFrontBack">
                   </div>
 
                   <div class="form-group">

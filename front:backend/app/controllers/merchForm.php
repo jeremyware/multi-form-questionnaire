@@ -130,16 +130,23 @@ $mrcCustomerSignature = '';
 
 $mrcForms = selectAll($table);
 
+$formErrors = array();
+
 if (isset($_POST['add-form'])) {
  unset($_POST['add-form']);
- dd($_POST);
+ // dd($_POST);
+
  $mrcForm_id = create($table, $_POST);
  $_SESSION['message'] = 'Form created Successfully';
  $_SESSION['type'] = 'success';
-
  header('location: ' . BASE_URL . '/index.php');
  exit();
+ echo "Error:\n";
+ print_r($stmt->error_list);
 }
+
+
+
 if (isset($_GET['id'])) {
  $id = $_GET['id'];
  $mrcForm = selectOne($table, ['id' => $id]);
@@ -165,8 +172,8 @@ if (isset($_GET['id'])) {
  $mrcProfileNumberOfEmployees = $mrcForm['mrcProfileNumberOfEmployees'];
  $mrcProfileTradeReference1 = $mrcForm['mrcProfileTradeReference1'];
  $mrcProfileContactName1 = $mrcForm['mrcProfileContactName1'];
- $mrcProfileContactNumber1 = $mrcForm['mrc-profile-number1'];
- $mrcProfileTradeReference2 = $mrcForm['mrcProfileContactNumber1'];
+ $mrcProfileContactNumber1 = $mrcForm['mrcProfileContactNumber1'];
+ $mrcProfileTradeReference2 = $mrcForm['mrcProfileTradeReference2'];
  $mrcProfileContactName2 = $mrcForm['mrcProfileContactName2'];
  $mrcProfileContactNumber2 = $mrcForm['mrcProfileContactNumber2'];
  $mrcOwnerPrimaryName = $mrcForm['mrcOwnerPrimaryName'];
@@ -178,14 +185,14 @@ if (isset($_GET['id'])) {
  $mrcOwnerStreetAddress = $mrcForm['mrcOwnerStreetAddress'];
  $mrcOwnerStreetAddress2 = $mrcForm['mrcOwnerStreetAddress2'];
  $mrcOwnerCity = $mrcForm['mrcOwnerCity'];
- $mrcOwnerState = $mrcForm['mrc-owner-state'];
+ $mrcOwnerState = $mrcForm['mrcOwnerState'];
  $mrcOwnerZip = $mrcForm['mrcOwnerZip'];
  $mrcOwnerDriversLicense = $mrcForm['mrcOwnerDriversLicense'];
  $mrcOwnerStateId = $mrcForm['mrcOwnerStateId'];
  $mrcOwnerYearResidence = $mrcForm['mrcOwnerYearResidence'];
  $mrcSecondOwnerName = $mrcForm['mrcSecondOwnerName'];
  $mrcSecondOwnerTitle = $mrcForm['mrcSecondOwnerTitle'];
- $mrcSecondOwnershipAge = $mrcForm['mrc-second-ownership-age'];
+ $mrcSecondOwnershipAge = $mrcForm['mrcSecondOwnershipAge'];
  $mrcSecondOwnerSocial = $mrcForm['mrcSecondOwnerSocial'];
  $mrcSecondOwnerDateOfBirth = $mrcForm['mrcSecondOwnerDateOfBirth'];
  $mrcSecondOwnerMobileNumber = $mrcForm['mrcSecondOwnerMobileNumber'];
@@ -274,6 +281,7 @@ if (isset($_GET['del_id'])) {
  header('location: ' . BASE_URL . '/index.php');
  exit();
 }
+
 
 if (isset($_POST['update-form'])) {
  $id = $_POST['id'];
