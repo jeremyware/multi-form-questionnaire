@@ -27,10 +27,10 @@
 
   <div class="left-sidebar">
    <ul>
-    <li id="rtlUNaVBi"><a href="#">Business Information</a></li>
-    <li id="rtlUNavBp"><a href="#">Business Profile</a></li>
-    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlUNavPi"><a href="#">Product Information</a></li>
+    <li id="rtlUNaVBi"><a href="#?=businessinfo">Business Information</a></li>
+    <li id="rtlUNavBp"><a href="#?=businessprofile">Business Profile</a></li>
+    <li id="rtlUNavOi"><a href="#?=ownerinfo">Owner Information</a></li>
+    <li id="rtlUNavPi"><a href="#?=productinfo">Product Information</a></li>
 
 
    </ul>
@@ -153,7 +153,7 @@
          <br>
          <div class="form-group">
           <a href="index.php" class="btn btn-secondary">Back</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN1">Next</a>
+          <a href="#?=businessprofile" class="btn btn-danger" id="rtlUBtnN1">Next</a>
          </div>
         </div>
         <div id="rtlUPq2">
@@ -251,8 +251,8 @@
          </div>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP2">Previous</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN2">Next</a>
+          <a href="#?=businessinfo" class="btn btn-danger" id="rtlUBtnP2">Previous</a>
+          <a href="#?=ownerinfo" class="btn btn-danger" id="rtlUBtnN2">Next</a>
          </div>
         </div>
         <div id="rtlUPq3">
@@ -477,8 +477,8 @@
          </fieldset>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP3">Previous</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN3">Next</a>
+          <a href="#?=businessprofile" class="btn btn-danger" id="rtlUBtnP3">Previous</a>
+          <a href="#?=productinfo" class="btn btn-danger" id="rtlUBtnN3">Next</a>
          </div>
         </div>
         <div id="rtlUPq4">
@@ -527,7 +527,7 @@
          </fieldset>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP4">Previous</a>
+          <a href="#?=ownerinfo" class="btn btn-danger" id="rtlUBtnP4">Previous</a>
           <button type="submit" name="add-form" class="btn btn-big success">Submit</button>
          </div>
         </div>
