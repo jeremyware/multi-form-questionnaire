@@ -541,7 +541,7 @@
                   <br>
                   <div class="form-group">
                     <a href="#" class="btn btn-danger" id="rtlUBtnP4">Previous</a>
-                    <button type="submit" name="add-form" class="btn btn-big success">Submit</button>
+                    <button type="submit" name="update-form" class="btn btn-big success">Update</button>
                   </div>
                 </div>
               </form>
