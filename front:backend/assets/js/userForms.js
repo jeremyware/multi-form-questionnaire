@@ -74,35 +74,7 @@ $(document).ready(function () {
     $("#progressText").html("");
   });
 
-
-
-
-  //  $("#submit").click(function (e) {
-
-  //    e.preventDefault();
-  //    // $("#productDescriptionErrorError").html('');
-
-  //    if ($("#productDescription").val() == '') {
-  //      $("#productDescriptionError").html('* Required Field.');
-  //      return false;
-  //    } else {
-  //      $.ajax({
-  //        url: 'dbh.inc.php',
-  //        method: 'POST',
-  //        data: $("form-data").serialize(),
-  //        success: function (response) {
-  //          $("#result").show();
-  //          $("#result").html(response);
-  //          $("form-data")[0].reset();
-  //        }
-
-  //      });
-  //    }
-
-  //  });
-
-
-
+  // retail prev
   $("#rtlUBtnP2").click(function () {
     $("#rtlUPq2").hide();
     $("#rtlUPq1").show();
@@ -285,73 +257,117 @@ $(document).ready(function () {
 })()
 
 
-// Coaching page control
+//  coaching page control
 
-// $(document).ready(function () {
-
-
-//   $("#next-1").click(function (e) {
-//     e.preventDefault();
-
-//     if ($("#businessName").val() == '') {
-//       $("#businessNameError").html('* Required Field.');
-//       return false;
-//     } else {
-//       $("#rtlUpq2").show();
-//       $("#rtlUpq1").hide();
-//       $("#progressBar").css("width", "50%");
-//       $("#progressText").html("");
-//     }
+$(document).ready(function () {
 
 
-//   });
+  $("#cchUBtnN1").click(function (e) {
+    e.preventDefault();
 
-//   $("#next-2").click(function () {
-//     $("#rtlUpq3").show();
-//     $("#rtlUpq2").hide();
-//     $("#progressBar").css("width", "75%");
-//     $("#progressText").html("");
-//   });
+    if ($("#businessName").val() == '') {
+      $("#businessNameError").html('* Required Field.');
+      return false;
+    } else {
+      $("#cchUPq2").show();
+      $("#cchUPq1").hide();
+      $("#progressBar").css("width", "35%");
+      $("#progressText").html("");
+    }
+  });
 
-//   $("#next-3").click(function () {
-//     $("#rtlUpq4").show();
-//     $("#rtlUpq3").hide();
-//     $("#progressBar").css("width", "100%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN2").click(function () {
+    $("#cchUPq3").show();
+    $("#cchUPq2").hide();
+    $("#progressBar").css("width", "65%");
+    $("#progressText").html("");
+  });
 
-//   $("#next-4").click(function () {
-//     $("#rtlUpq5").show();
-//     $("#rtlUpq4s").hide();
-//     $("#progressBar").css("width", "100%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN3").click(function () {
+    $("#cchUPq4").show();
+    $("#cchUPq3").hide();
+    $("#progressBar").css("width", "100%");
+    $("#progressText").html("");
+  });
 
-//   $("#prev-2").click(function () {
-//     $("#rtlUpq2").hide();
-//     $("#rtlUpq1").show();
-//     $("#progressBar").css("width", "25%");
-//     $("#progressText").html("");
-//   });
-//   $("#prev-3").click(function () {
-//     $("#rtlUpq3").hide();
-//     $("#rtlUpq2").show();
-//     $("#progressBar").css("width", "50%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN4").click(function () {
+    $("#cchUPq5").show();
+    $("#cchUPq4").hide();
+    $("#progressBar").css("width", "100%");
+    $("#progressText").html("");
+  });
+});
 
-//   $("#prev-4").click(function () {
-//     $("#rtlUpq4").hide();
-//     $("#rtlUpq3").show();
-//     $("#progressBar").css("width", "50%");
-//     $("#progressText").html("");
-//   });
+// coaching prev
 
-//   //  $("#prev-5").click(function () {
-//   //    $("#rtlUpq5").hide();
-//   //    $("#rtlUpq4").show();
-//   //    $("#progressBar").css("width", "75%");
-//   //    $("#progressText").html("");
-//   //  });
+$("#cchUBtnP1").click(function () {
+  $("#cchUPq2").hide();
+  $("#cchUPq1").show();
+  $("#progressBar").css("width", "25%");
+  $("#progressText").html("");
+});
+$("#cchUBtnP2").click(function () {
+  $("#cchUPq3").hide();
+  $("#cchUPq2").show();
+  $("#progressBar").css("width", "50%");
+  $("#progressText").html("");
+});
 
-// });
+$("#cchUBtnP3").click(function () {
+  $("#cchUPq4").hide();
+  $("#cchUPq3").show();
+  $("#progressBar").css("width", "75%");
+  $("#progressText").html("");
+});
+
+$("#cchUBtnP4").click(function () {
+  $("#cchUPq5").hide();
+  $("#cchUPq4").show();
+  $("#progressBar").css("width", "75%");
+  $("#progressText").html("");
+});
+
+
+$(document).ready(function () {
+
+  $('#cchUNaVBi').click(function () {
+    $('#cchUPq1').show();
+    $("#cchUPq2").hide();
+    $("#cchUPq3").hide();
+    $("#cchUPq4").hide();
+    $("#cchUPq5").hide();
+    $("#progressBar").css("width", "10%");
+  });
+
+  $('#cchUNavBp').click(function () {
+    $('#cchUPq2').show();
+    $("#cchUPq1").hide();
+    $("#cchUPq3").hide();
+    $("#cchUPq4").hide();
+    $("#progressBar").css("width", "35%");
+  });
+
+  $('#cchUNavAi').click(function () {
+    $('#cchUPq3').show();
+    $("#cchUPq2").hide();
+    $("#cchUPq4").hide();
+    $("#cchUPq5").hide();
+    $("#progressBar").css("width", "55%");
+  });
+
+  $('#cchUNavOi').click(function () {
+    $('#cchUPq4').show();
+    $("#cchUPq3").hide();
+    $("#cchUPq5").hide();
+    $("#cchUPq6").hide();
+    $("#progressBar").css("width", "75%");
+  });
+
+  $('#cchUNavPi').click(function () {
+    $('#cchUPq5').show();
+    $("#cchUPq4").hide();
+    $("#cchUPq6").hide();
+    $("#cchUPq1").hide();
+    $("#progressBar").css("width", "100%");
+  });
+});

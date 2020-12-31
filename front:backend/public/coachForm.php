@@ -1,5 +1,5 @@
 <?php include("../path.php"); ?>
-<?php include(ROOT_PATH . "/app/controllers/retailUserForm.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/coachUserForm.php"); ?>
 
 
 <!DOCTYPE html>
@@ -27,10 +27,11 @@
 
   <div class="left-sidebar">
    <ul>
-    <li id="rtlUNaVBi"><a href="#">Business Information</a></li>
-    <li id="rtlUNavBp"><a href="#">Business Profile</a></li>
-    <li id="rtlUNavOi"><a href="#">Owner Information</a></li>
-    <li id="rtlUNavPi"><a href="#">Product Information</a></li>
+    <li id="cchUNaVBi"><a href="#">Business Information</a></li>
+    <li id="cchUNavBp"><a href="#">Business Profile</a></li>
+    <li id="cchUNavAi"><a href="#">Authorization Information</a></li>
+    <li id="cchUNavOi"><a href="#">Owner Information</a></li>
+    <li id="cchUNavPi"><a href="#">Product Information</a></li>
 
 
    </ul>
@@ -41,7 +42,7 @@
 
    <div class="content">
     <div class="wrapper">
-     <h2 class=" page-title">Retail Questionnaire</h2>
+     <h2 class=" page-title">Coaching Questionnaire</h2>
      <!-- <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?> -->
 
      <div class="row justify-content-center ">
@@ -51,31 +52,31 @@
          <b class="lead" id="progressText"></b>
         </div>
        </div>
-       <form action="retailForm.php" method="POST" id="form-data">
+       <form action="coachForm.php" method="POST" id="form-data">
 
 
-        <div id="rtlUPq1">
+        <div id="cchUPq1">
          <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
 
          <div class="form-group">
           <label for="businessName">Business Name</label>
-          <input type="text" name="rtlBusinessName" class="text-input" id="businessNameEdit">
+          <input type="text" name="cchBusinessName" class="text-input" id="businessNameEdit">
          </div>
          <div class="form-group">
           <label for="businessStreet1">Street Address</label>
-          <input class="text-input" type="text" id="businessStreet1" name="rtlCompanyStreet" />
+          <input class="text-input" type="text" id="businessStreet1" name="cchCompanyStreet" />
          </div>
          <div class="form-group">
           <label for="street2">Street Address Line 2</label>
-          <input class="text-input" type="text" id="businessStreet2" name="rtlCompanyStreetLine2" />
+          <input class="text-input" type="text" id="businessStreet2" name="cchCompanyStreetLine2" />
          </div>
          <div class="form-group">
           <label for="city">City</label>
-          <input class="text-input" type="text" id="businessCity" name="rtlCompanyCity" />
+          <input class="text-input" type="text" id="businessCity" name="cchCompanyCity" />
          </div>
          <div class="form-group">
           <label for="state">State</label>
-          <select class="text-input" id="businessState" name="rtlCompanyState">
+          <select class="text-input" id="businessState" name="cchCompanyState">
            <option value="">Please Select</option>
            <option value="AK">Alaska</option>
            <option value="AL">Alabama</option>
@@ -133,73 +134,69 @@
          </div>
          <div class="form-group">
           <label for="zipecode">Zipcode</label>
-          <input class="text-input" type="text" id="businessZip" name="rtlCompanyZip" />
+          <input class="text-input" type="text" id="businessZip" name="cchCompanyZip" />
          </div>
          <div class="form-group">
           <label for="phone">Company Phone Number</label>
-          <input class="text-input" type="text" id="businessNumber" name="rtlCompanyPhoneNumber" />
+          <input class="text-input" type="text" id="businessNumber" name="cchCompanyPhoneNumber" />
          </div>
          <div class="form-group">
           <label for="website">Company Website
           </label>
-          <input class="text-input" type="text" id="businessSite" name="rtlCompanyWebsiteUrl" />
+          <input class="text-input" type="text" id="businessSite" name="cchCompanyWebsiteUrl" />
          </div>
          <div class="form-group">
           <label for="fname">Contact First Name</label>
-          <input class="text-input" type="text" id="contactFirst" name="rtlContactFirstName" />
+          <input class="text-input" type="text" id="contactFirst" name="cchContactFirstName" />
          </div>
          <div class="form-group">
           <label for="lname">Contact Last Name</label>
-          <input class="text-input" type="text" id="contactLast" name="rtlContactLastName" />
+          <input class="text-input" type="text" id="contactLast" name="cchContactLastName" />
          </div>
          <br>
          <div class="form-group">
           <a href="index.php" class="btn btn-secondary">Back</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN1">Next</a>
-
+          <a href="#" class="btn btn-danger" id="cchUBtnN1">Next</a>
          </div>
         </div>
-        <div id="rtlUPq2">
+        <br>
+        <div id="cchUPq2">
          <h4 class="text-center bg-primary p-1 rounded text-light">Business Profile</h4>
-         <div class="form-group">
-
-         </div>
-         <br>
          <fieldset class="form-group">
           <label for="businessStructure">Business Structure: </label>
           <br>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessCorporation" value="Corporation" />
+           <input class="form-check-input" type="radio" name="cchBusinessStructure" id="businessCorporation" value="Corporation" />
            <label for="businessCorporation" class="form-check-label" for="flexRadioDefault1"> Corporation </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessLLC" value="LLC" />
+           <input class="form-check-input" type="radio" name="cchBusinessStructure" id="businessLLC" value="LLC" />
            <label for="businessLLC" class="form-check-label" for="flexRadioDefault1"> LLC </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessSoleProprietor" value="Sole Proprietor" />
+           <input class="form-check-input" type="radio" name="cchBusinessStructure" id="businessSoleProprietor" value="Sole Proprietor" />
            <label for="businessSoleProprietor" class="form-check-label" for="flexRadioDefault1"> Sole Proprietor </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessOther" value="Other" />
+           <input class="form-check-input" type="radio" name="cchBusinessStructure" id="businessOther" value="Other" />
            <label for="businessOther" class="form-check-label" for="flexRadioDefault1"> Other </label>
-           <textarea type="text" class="text-input" name="rtlBusinessStructureOther" value="Other" id="businessOtherTxt"></textarea>
+           <textarea type="text" class="text-input" name="cchBusinessStructureOther" value="Other" id="businessOtherTxt"></textarea>
            <span class="checkmark"></span>
            </label>
           </div>
          </fieldset>
          <div class="form-group">
           <label>Federal Tax ID:</label>
-          <input class="text-input" type="text" id="bussinessTaxId" name="rtlFederalTaxId" />
+          <input class="text-input" type="text" id="bussinessTaxId" name="cchFederalTaxId" />
          </div>
          <div class="form-group">
           <label>Date Business Created</label>
-          <input class="text-input" type="date" id="businessCreated" name="rtlBusinessDateFormed">
+          <input class="text-input" type="date" id="businessCreated" name="cchBusinessDateFormed">
           <p class="form-text text-danger" id="businessCreatedError"></p>
          </div>
          <div class="form-group">
           <label>State Business Create</label><br>
-          <select class="text-input" id="businessProfileState" name="rtlBusinessStateCreated">
+          <select class="text-input" id="businessProfileState" name="cchBusinessStateCreated">
            <option value="">Please Select</option>
            <option value="AK">Alaska</option>
            <option value="AL">Alabama</option>
@@ -258,53 +255,85 @@
          </div>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP2">Previous</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN2">Next</a>
-
+          <a href="#" class="btn btn-danger" id="cchUBtnP1">Previous</a>
+          <a href="#" class="btn btn-danger" id="cchUBtnN2">Next</a>
          </div>
         </div>
-        <div id="rtlUPq3">
+
+        <div id="cchUPq3">
+         <h4 class="text-center bg-primary p-1 rounded text-light">Authorization Information</h4>
+         <div class="form-group">
+          <label>Call Scripts</label>
+          <input type="file" name="cchCallScripts" class="text-input">
+         </div>
+         <div class="form-group">
+          <label>Order Forms</label>
+          <input type="file" name="cchOrderForms" class="text-input">
+         </div>
+         <div class="form-group">
+          <label>Authorization Forms</label>
+          <input type="file" name="cchAuthForms" class="text-input">
+         </div>
+         <div class="form-group">
+          <label>Login for memberships sites</label>
+          <input type="file" name="cchLoginMemb" class="text-input">
+         </div>
+         <div class="form-group">
+          <label>Fulfillment Agreements (if outsourced)</label>
+          <input type="file" name="cchFulfillment" class="text-input">
+         </div>
+         <div class="form-group">
+          <label>Customer Service Agreement (if outsourced)</label>
+          <input type="file" name="cchCustomerServ" class="text-input">
+         </div>
+
+         <div class="form-group">
+          <a href="#" class="btn btn-danger" id="cchUBtnP2">Previous</a>
+          <a href="#" class="btn btn-danger" id="cchUBtnN3">Next</a>
+         </div>
+        </div>
+        <div id="cchUPq4">
          <h4 class="text-center bg-primary p-1 rounded text-light">Owner Information</h4>
          <fieldset id="primaryOwner">
           <div class="form-group">
            <label for="ownerFirst">First Name</label>
-           <input class="text-input" type="text" id="ownerFirst" name="rtlOwnerFirstName" />
+           <input class="text-input" type="text" id="ownerFirst" name="cchOwnerFirstName" />
           </div>
           <div class="form-group">
            <label for="ownerLast">Last Name</label>
-           <input class="text-input" type="text" id="ownerLast" name="rtlOwnerLastName" />
+           <input class="text-input" type="text" id="ownerLast" name="cchOwnerLastName" />
           </div>
           <div class="form-group">
            <label for="ownerTitle">Title</label>
-           <input class="text-input" type="text" id="ownerTitle" name="rtlOwnerTitle" />
+           <input class="text-input" type="text" id="ownerTitle" name="cchOwnerTitle" />
 
           </div>
           <div class="form-group">
            <label for="ownerStreet2">Ownership Age</label>
-           <input class="text-input" type="text" id="ownerAge" name="rtlOwnerAge" />
+           <input class="text-input" type="text" id="ownerAge" name="cchOwnerAge" />
           </div>
           <div class="form-group">
            <label for="ownerFirst">Social Security Number</label>
-           <input class="text-input" type="text" id="ownerSocial" name="rtlOwnerSocial" />
+           <input class="text-input" type="text" id="ownerSocial" name="cchOwnerSocial" />
           </div>
           <div class="form-group">
            <label for="ownerFirst">Date of Birth</label>
-           <input class="text-input" type="date" id="ownerDateOfBirth" name="rtlOwnerDateOfBirth">
+           <input class="text-input" type="date" id="ownerDateOfBirth" name="cchOwnerDateOfBirth">
 
           </div>
           <div class="form-group">
            <label for="ownerAddress">Home Address</label>
-           <input class="text-input" type="text" id="ownerStreet1" name="rtlOwnerCompanyAddress" />
+           <input class="text-input" type="text" id="ownerStreet1" name="cchOwnerCompanyAddress" />
 
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerStreet2" name="rtlOwnerCompanyAddressLine2" />
+           <input class="text-input" type="text" id="ownerStreet2" name="cchOwnerCompanyAddressLine2" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerCity" name="rtlOwnerCompanyCity" />
+           <input class="text-input" type="text" id="ownerCity" name="cchOwnerCompanyCity" />
           </div>
           <div class="form-group">
-           <select class="text-input" id="ownerState" name="rtlOwnerCompanyState">
+           <select class="text-input" id="ownerState" name="cchOwnerCompanyState">
             <option value="">Please Select</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -361,11 +390,11 @@
            </select>
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerZipcode" name="rtlOwnerCompanyZip" />
+           <input class="text-input" type="text" id="ownerZipcode" name="cchOwnerCompanyZip" />
           </div>
           <div class="form-group">
            <label for="ownerDriversLicense">Driver's Licenses Number</label>
-           <input class="text-input" type="text" id="ownerDriversLicense" name="rtlOwnerCompanyDriversLicense">
+           <input class="text-input" type="text" id="ownerDriversLicense" name="cchOwnerCompanyDriversLicense">
           </div>
           <br>
           <div class="form-group" id="formChkBx">
@@ -381,44 +410,44 @@
           <br>
           <div class="form-group">
            <label for="secondOwnerFirst">First Name</label>
-           <input class="text-input" class="firstName" type="text" id="secondOwnerFirst" name="rtlSecondaryOwnersFirstName" />
+           <input class="text-input" class="firstName" type="text" id="secondOwnerFirst" name="cchSecondaryOwnersFirstName" />
           </div>
           <div class="form-group">
            <label for="secondOwnerLast">Last Name</label>
-           <input class="text-input" class="lastName" type="text" id="secondOwnerLast" name="rtlSecondaryOwnersLastName">
+           <input class="text-input" class="lastName" type="text" id="secondOwnerLast" name="cchSecondaryOwnersLastName">
           </div>
           <div class="form-group">
            <label for="secondOwnerTitle">Title</label>
-           <input class="text-input" type="text" id="secondOwnerTitle" name="rtlSecondaryOwnerTitle" />
+           <input class="text-input" type="text" id="secondOwnerTitle" name="cchSecondaryOwnerTitle" />
           </div>
           <div class="form-group">
            <label for="secondOwnerAge">Ownership Age</label>
-           <input class="text-input" type="text" id="secondOwnerAge" name="rtlSecondaryOwnerAge" />
+           <input class="text-input" type="text" id="secondOwnerAge" name="cchSecondaryOwnerAge" />
           </div>
           <div class="form-group">
            <label for="secondOwnerSocial">Social Security Number</label>
-           <input class="text-input" type="text" id="secondOwnerSocial" name="rtlSecondaryOwnerSocial" />
+           <input class="text-input" type="text" id="secondOwnerSocial" name="cchSecondaryOwnerSocial" />
           </div>
           <div class="form-group">
            <label for="secondOwnerBirth">Date of Birth</label>
-           <input class="text-input" type="date" id="secondDateOfBirth" name="rtlSecondaryOwnerDateOfBirth">
+           <input class="text-input" type="date" id="secondDateOfBirth" name="cchSecondaryOwnerDateOfBirth">
           </div>
           <div class="form-group">
            <label for="secondOwnerNumber">Phone Number</label>
-           <input class="text-input" type="text" id="secondOwnerNumber" name="rtlSecondaryOwnerPhone" />
+           <input class="text-input" type="text" id="secondOwnerNumber" name="cchSecondaryOwnerPhone" />
           </div>
           <div class="form-group">
            <label for="secondOwnerAddress">Home Address</label>
-           <input class="text-input" type="text" id="secondOwnerStreet1" name="rtlSecondaryOwnerAddress" />
+           <input class="text-input" type="text" id="secondOwnerStreet1" name="cchSecondaryOwnerAddress" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="seecondOwnerStreet2" name="rtlSecondaryOwnerAddressLine2" />
+           <input class="text-input" type="text" id="seecondOwnerStreet2" name="cchSecondaryOwnerAddressLine2" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="secondOwnerCity" name="rtlSecondaryOwnerCity" />
+           <input class="text-input" type="text" id="secondOwnerCity" name="cchSecondaryOwnerCity" />
           </div>
           <div class="form-group">
-           <select class="text-input" id="secondOwnerState" name="rtlSecondaryOwnerState">
+           <select class="text-input" id="secondOwnerState" name="cchSecondaryOwnerState">
             <option value="">Please Select</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -477,67 +506,67 @@
           </div>
 
           <div class="form-group">
-           <input class="text-input" type="text" id="secondOwnerZipcode" name="rtlSecondaryOwnerZip" />
+           <input class="text-input" type="text" id="secondOwnerZipcode" name="cchSecondaryOwnerZip" />
           </div>
           <div class="form-group">
            <label for="secondOwnerDriversLicense">Driver's License Number</label>
-           <input class="text-input" type="text" id="secondOwnerDriversLicense" name="rtlSecondaryOwnerDriversLicense">
+           <input class="text-input" type="text" id="secondOwnerDriversLicense" name="cchSecondaryOwnerDriversLicense">
           </div>
          </fieldset>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP3">Previous</a>
-          <a href="#" class="btn btn-danger" id="rtlUBtnN3">Next</a>
+          <a href="#" class="btn btn-danger" id="cchUBtnP3">Previous</a>
+          <a href="#" class="btn btn-danger" id="cchUBtnN4">Next</a>
 
          </div>
         </div>
-        <div id="rtlUPq4">
+        <div id="cchUPq5">
          <h4 class="text-center bg-primary p-1 rounded text-light">Product Info</h4>
          <div class="form-group">
           <label for="productDescription">Briefly describe product/service being sold:</label>
           <br>
-          <textarea type="text" class="form-control rounded-0" name="rtlDescribeProductInfo" cols="45" rows="5" id="productDescription"></textarea>
+          <textarea type="text" class="form-control rounded-0" name="cchDescribeProductInfo" cols="45" rows="5" id="productDescription"></textarea>
           <p class="form-text text-danger" id="productDescriptionError"></p>
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">Projected Annual Volume</label>
           <br>
-          <input class="text-input" type="text" id="productVolume" name="rtlProductAnnualVolume">
+          <input class="text-input" type="text" id="productVolume" name="cchProductAnnualVolume">
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">Average Ticket</label>
           <br>
-          <input class="text-input" type="text" id="productAverageTicket" name="rtlProductAverageTicket">
+          <input class="text-input" type="text" id="productAverageTicket" name="cchProductAverageTicket">
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">High Ticet</label>
           <br>
-          <input class="text-input" type="text" id="productHighTicket" name="rtlProductHighTicket">
+          <input class="text-input" type="text" id="productHighTicket" name="cchProductHighTicket">
          </div>
          <br>
-         <fieldset class="transaction-input-radio" name="rtlTransactionType" id="transactionType">
+         <fieldset class="transaction-input-radio" name="cchTransactionType" id="transactionType">
           <label for="transactionType">
            <h3> Transaction Type: </h3>
           </label>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productCardSwipe" value="Card Swipe" />
+           <input class="form-check-input" type="radio" name="cchTransactionType" id="productCardSwipe" value="Card Swipe" />
            <label for="productCardSwipe" class="form-check-label" for="flexRadioDefault1"> Card Swipe </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productMailTele" value="Mail order / Telehone Order" />
+           <input class="form-check-input" type="radio" name="cchTransactionType" id="productMailTele" value="Mail order / Telehone Order" />
            <label for="productMailTele" class="form-check-label" for="flexRadioDefault1"> Mail order / Telehone Order </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productIntEco" value="Internet / Ecommerce" />
+           <input class="form-check-input" type="radio" name="cchTransactionType" id="productIntEco" value="Internet / Ecommerce" />
            <label for="productIntEco" class="form-check-label" for="flexRadioDefault1"> Internet / Ecommerce </label>
           </div>
          </fieldset>
          <br>
          <div class="form-group">
-          <a href="#" class="btn btn-danger" id="rtlUBtnP4">Previous</a>
+          <a href="#" class="btn btn-danger" id="cchUBtnP4">Previous</a>
           <button type="submit" name="add-form" class="btn btn-big success">Submit</button>
          </div>
         </div>
@@ -548,6 +577,7 @@
    </div>
   </div>
  </div>
+
  <div class="form-footer">
   &copy; platinumpayments.com | Designed by Epype
  </div>

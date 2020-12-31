@@ -285,73 +285,117 @@ $(document).ready(function () {
 })()
 
 
-// Coaching page control
+//  coaching page control
 
-// $(document).ready(function () {
-
-
-//   $("#next-1").click(function (e) {
-//     e.preventDefault();
-
-//     if ($("#businessName").val() == '') {
-//       $("#businessNameError").html('* Required Field.');
-//       return false;
-//     } else {
-//       $("#rtlApq2").show();
-//       $("#rtlApq1").hide();
-//       $("#progressBar").css("width", "50%");
-//       $("#progressText").html("");
-//     }
+$(document).ready(function () {
 
 
-//   });
+  $("#cchUBtnN1").click(function (e) {
+    e.preventDefault();
 
-//   $("#next-2").click(function () {
-//     $("#rtlApq3").show();
-//     $("#rtlApq2").hide();
-//     $("#progressBar").css("width", "75%");
-//     $("#progressText").html("");
-//   });
+    if ($("#businessName").val() == '') {
+      $("#businessNameError").html('* Required Field.');
+      return false;
+    } else {
+      $("#cchUPq2").show();
+      $("#cchUPq1").hide();
+      $("#progressBar").css("width", "15%");
+      $("#progressText").html("");
+    }
+  });
 
-//   $("#next-3").click(function () {
-//     $("#rtlApq4").show();
-//     $("#rtlApq3").hide();
-//     $("#progressBar").css("width", "100%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN2").click(function () {
+    $("#cchUPq3").show();
+    $("#cchUPq2").hide();
+    $("#progressBar").css("width", "45%");
+    $("#progressText").html("");
+  });
 
-//   $("#next-4").click(function () {
-//     $("#rtlApq5").show();
-//     $("#rtlApq4s").hide();
-//     $("#progressBar").css("width", "100%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN3").click(function () {
+    $("#cchUPq4").show();
+    $("#cchUPq3").hide();
+    $("#progressBar").css("width", "75%");
+    $("#progressText").html("");
+  });
 
-//   $("#prev-2").click(function () {
-//     $("#rtlApq2").hide();
-//     $("#rtlApq1").show();
-//     $("#progressBar").css("width", "25%");
-//     $("#progressText").html("");
-//   });
-//   $("#prev-3").click(function () {
-//     $("#rtlApq3").hide();
-//     $("#rtlApq2").show();
-//     $("#progressBar").css("width", "50%");
-//     $("#progressText").html("");
-//   });
+  $("#cchUBtnN4").click(function () {
+    $("#cchUPq5").show();
+    $("#cchUPq4").hide();
+    $("#progressBar").css("width", "100%");
+    $("#progressText").html("");
+  });
+});
 
-//   $("#prev-4").click(function () {
-//     $("#rtlApq4").hide();
-//     $("#rtlApq3").show();
-//     $("#progressBar").css("width", "50%");
-//     $("#progressText").html("");
-//   });
+// coaching prev
 
-//   //  $("#prev-5").click(function () {
-//   //    $("#rtlApq5").hide();
-//   //    $("#rtlApq4").show();
-//   //    $("#progressBar").css("width", "75%");
-//   //    $("#progressText").html("");
-//   //  });
+$("#cchUBtnP1").click(function () {
+  $("#cchUPq2").hide();
+  $("#cchUPq1").show();
+  $("#progressBar").css("width", "15%");
+  $("#progressText").html("");
+});
+$("#cchUBtnP2").click(function () {
+  $("#cchUPq3").hide();
+  $("#cchUPq2").show();
+  $("#progressBar").css("width", "35%");
+  $("#progressText").html("");
+});
 
-// });
+$("#cchUBtnP3").click(function () {
+  $("#cchUPq4").hide();
+  $("#cchUPq3").show();
+  $("#progressBar").css("width", "55%");
+  $("#progressText").html("");
+});
+
+$("#cchUBtnP4").click(function () {
+  $("#cchUPq5").hide();
+  $("#cchUPq4").show();
+  $("#progressBar").css("width", "75%");
+  $("#progressText").html("");
+});
+
+
+$(document).ready(function () {
+
+  $('#cchUNaVBi').click(function () {
+    $('#cchUPq1').show();
+    $("#cchUPq2").hide();
+    $("#cchUPq3").hide();
+    $("#cchUPq4").hide();
+    $("#cchUPq5").hide();
+    $("#progressBar").css("width", "10%");
+  });
+
+  $('#cchUNavBp').click(function () {
+    $('#cchUPq2').show();
+    $("#cchUPq1").hide();
+    $("#cchUPq3").hide();
+    $("#cchUPq4").hide();
+    $("#progressBar").css("width", "35%");
+  });
+
+  $('#cchUNavAi').click(function () {
+    $('#cchUPq3').show();
+    $("#cchUPq2").hide();
+    $("#cchUPq4").hide();
+    $("#cchUPq5").hide();
+    $("#progressBar").css("width", "55%");
+  });
+
+  $('#cchUNavOi').click(function () {
+    $('#cchUPq4').show();
+    $("#cchUPq3").hide();
+    $("#cchUPq5").hide();
+    $("#cchUPq6").hide();
+    $("#progressBar").css("width", "75%");
+  });
+
+  $('#cchUNavPi').click(function () {
+    $('#cchUPq5').show();
+    $("#cchUPq4").hide();
+    $("#cchUPq6").hide();
+    $("#cchUPq1").hide();
+    $("#progressBar").css("width", "100%");
+  });
+});

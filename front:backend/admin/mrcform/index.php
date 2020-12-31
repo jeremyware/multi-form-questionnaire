@@ -45,7 +45,8 @@
     <table>
      <thead>
       <th></th>
-      <th><th>
+      <th>
+      <th>
       <th></th>
       <th colspan="3">Action</th>
      </thead>
