@@ -133,6 +133,7 @@ $mrcForms = selectAll($table);
 $formErrors = array();
 
 if (isset($_POST['add-form'])) {
+ $exstingForm = selectOne('PlatPayRetailForm', ['rtlBusinessName' => $rtlForm['rtlBusinessName']]);
  unset($_POST['add-form']);
  // dd($_POST);
 

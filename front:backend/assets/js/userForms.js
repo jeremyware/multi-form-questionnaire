@@ -94,148 +94,301 @@ $(document).ready(function () {
     $("#progressBar").css("width", "75%");
     $("#progressText").html("");
   });
+});
 
-  //  $("#rtlUBtnP5").click(function () {
-  //    $("#rtlUpq5").hide();
-  //    $("#rtlUpq4").show();
-  //    $("#progressBar").css("width", "75%");
-  //    $("#progressText").html("");
-  //  });
-
-
-
-  //  merchant page control
+//  $("#rtlUBtnP5").click(function () {
+//    $("#rtlUpq5").hide();
+//    $("#rtlUpq4").show();
+//    $("#progressBar").css("width", "75%");
+//    $("#progressText").html("");
+//  });
 
 
 
-
-  $("#mrcUBtnN1").click(function () {
-
-    $("#mrcUPq2").show();
-    $("#mrcUPq1").hide();
-    $("#progressBar").css("width", "20%");
-    $("#progressText").html("");
-  });
+//  merchant page control
 
 
-  $("#mrcUBtnN2").click(function () {
-    $("#mrcUPq3").show();
-    $("#mrcUPq2").hide();
-    $("#progressBar").css("width", "30%");
-    $("#progressText").html("");
-  });
 
-  $("#mrcUBtnN3").click(function () {
-    $("#mrcUPq4").show();
-    $("#mrcUPq3").hide();
-    $("#progressBar").css("width", "40%");
-    $("#progressText").html("");
-  });
 
-  $("#mrcUBtnN4").click(function () {
-    $("#mrcUPq5").show();
-    $("#mrcUPq4").hide();
-    $("#progressBar").css("width", "50%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN1").click(function () {
 
-  $("#mrcUBtnN5").click(function () {
-    $("#mrcUPq6").show();
-    $("#mrcUPq5").hide();
-    $("#progressBar").css("width", "60%");
-    $("#progressText").html("");
-  });
+  $("#mrcUPq2").show();
+  $("#mrcUPq1").hide();
+  $("#progressBar").css("width", "20%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnN6").click(function () {
-    $("#mrcUPq7").show();
-    $("#mrcUPq6").hide();
-    $("#progressBar").css("width", "70%");
-    $("#progressText").html("");
-  });
 
-  $("#mrcUBtnN7").click(function () {
-    $("#mrcUPq8").show();
-    $("#mrcUPq7").hide();
-    $("#progressBar").css("width", "80%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN2").click(function () {
+  $("#mrcUPq3").show();
+  $("#mrcUPq2").hide();
+  $("#progressBar").css("width", "30%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnN8").click(function () {
-    $("#mrcUPq9").show();
-    $("#mrcUPq8").hide();
-    $("#progressBar").css("width", "90%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN3").click(function () {
+  $("#mrcUPq4").show();
+  $("#mrcUPq3").hide();
+  $("#progressBar").css("width", "40%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnN9").click(function () {
-    $("#mrcUPq10").show();
-    $("#mrcUPq9").hide();
-    $("#progressBar").css("width", "100%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN4").click(function () {
+  $("#mrcUPq5").show();
+  $("#mrcUPq4").hide();
+  $("#progressBar").css("width", "50%");
+  $("#progressText").html("");
+});
 
-  // MERCHANT PREVIOUS
+$("#mrcUBtnN5").click(function () {
+  $("#mrcUPq6").show();
+  $("#mrcUPq5").hide();
+  $("#progressBar").css("width", "60%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP2").click(function () {
-    $("#mrcUPq2").hide();
-    $("#mrcUPq1").show();
-    $("#progressBar").css("width", "10%");
-    $("#progressText").html("");
-  });
-  $("#mrcUBtnP3").click(function () {
-    $("#mrcUPq3").hide();
-    $("#mrcUPq2").show();
-    $("#progressBar").css("width", "20%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN6").click(function () {
+  $("#mrcUPq7").show();
+  $("#mrcUPq6").hide();
+  $("#progressBar").css("width", "70%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP4").click(function () {
-    $("#mrcUPq4").hide();
-    $("#mrcUPq3").show();
-    $("#progressBar").css("width", "30%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN7").click(function () {
+  $("#mrcUPq8").show();
+  $("#mrcUPq7").hide();
+  $("#progressBar").css("width", "80%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP5").click(function () {
-    $("#mrcUPq5").hide();
-    $("#mrcUPq4").show();
-    $("#progressBar").css("width", "40%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN8").click(function () {
+  $("#mrcUPq9").show();
+  $("#mrcUPq8").hide();
+  $("#progressBar").css("width", "90%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP6").click(function () {
-    $("#mrcUPq6").hide();
-    $("#mrcUPq5").show();
-    $("#progressBar").css("width", "50%");
-    $("#progressText").html("");
-  });
-  $("#mrcUBtnP7").click(function () {
-    $("#mrcUPq7").hide();
-    $("#mrcUPq6").show();
-    $("#progressBar").css("width", "60%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnN9").click(function () {
+  $("#mrcUPq10").show();
+  $("#mrcUPq9").hide();
+  $("#progressBar").css("width", "100%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP8").click(function () {
-    $("#mrcUPq8").hide();
-    $("#mrcUPq7").show();
-    $("#progressBar").css("width", "70%");
-    $("#progressText").html("");
-  });
+// MERCHANT PREVIOUS
 
-  $("#mrcUBtnP9").click(function () {
-    $("#mrcUPq9").hide();
-    $("#mrcUPq8").show();
-    $("#progressBar").css("width", "80%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnP2").click(function () {
+  $("#mrcUPq2").hide();
+  $("#mrcUPq1").show();
+  $("#progressBar").css("width", "10%");
+  $("#progressText").html("");
+});
+$("#mrcUBtnP3").click(function () {
+  $("#mrcUPq3").hide();
+  $("#mrcUPq2").show();
+  $("#progressBar").css("width", "20%");
+  $("#progressText").html("");
+});
 
-  $("#mrcUBtnP10").click(function () {
-    $("#mrcUPq10").hide();
-    $("#mrcUPq9").show();
-    $("#progressBar").css("width", "90%");
-    $("#progressText").html("");
-  });
+$("#mrcUBtnP4").click(function () {
+  $("#mrcUPq4").hide();
+  $("#mrcUPq3").show();
+  $("#progressBar").css("width", "30%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP5").click(function () {
+  $("#mrcUPq5").hide();
+  $("#mrcUPq4").show();
+  $("#progressBar").css("width", "40%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP6").click(function () {
+  $("#mrcUPq6").hide();
+  $("#mrcUPq5").show();
+  $("#progressBar").css("width", "50%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP7").click(function () {
+  $("#mrcUPq7").hide();
+  $("#mrcUPq6").show();
+  $("#mrcUPq6").css("color", "red");
+  $("#progressBar").css("width", "60%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP8").click(function () {
+  $("#mrcUPq8").hide();
+  $("#mrcUPq7").show();
+  $("#progressBar").css("width", "70%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP9").click(function () {
+  $("#mrcUPq9").hide();
+  $("#mrcUPq8").show();
+  $("#progressBar").css("width", "80%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnP10").click(function () {
+  $("#mrcUPq10").hide();
+  $("#mrcUPq9").show();
+  $("#progressBar").css("width", "90%");
+  $("#progressText").html("");
+});
+
+// Merchant Side Bar
+
+$("#mrcUBtnBi").click(function () {
+  $("#mrcUPq1").show();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "10%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnBp").click(function () {
+  $("#mrcUPq2").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "20%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnOo").click(function () {
+  $("#mrcUPq3").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "30%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnSs").click(function () {
+  $("#mrcUPq4").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "40%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnPi").click(function () {
+  $("#mrcUPq5").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "50%");
+  $("#progressText").html("");
+});
+$("#mrcUBtnCp").click(function () {
+  $("#mrcUPq6").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "60%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnBa").click(function () {
+  $("#mrcUPq7").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "70%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnOc").click(function () {
+  $("#mrcUPq8").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq9").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "80%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnFt").click(function () {
+  $("#mrcUPq9").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq10").hide();
+  $("#progressBar").css("width", "90%");
+  $("#progressText").html("");
+});
+
+$("#mrcUBtnCs").click(function () {
+  $("#mrcUPq10").show();
+  $("#mrcUPq1").hide();
+  $("#mrcUPq2").hide();
+  $("#mrcUPq3").hide();
+  $("#mrcUPq4").hide();
+  $("#mrcUPq5").hide();
+  $("#mrcUPq6").hide();
+  $("#mrcUPq7").hide();
+  $("#mrcUPq8").hide();
+  $("#mrcUPq9").hide();
+  $("#progressBar").css("width", "100%");
+  $("#progressText").html("");
 });
 
 (function () {

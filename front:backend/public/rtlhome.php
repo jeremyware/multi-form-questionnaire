@@ -1,5 +1,5 @@
 <?php include("../path.php"); ?>
-<?php include(ROOT_PATH . "/app/controllers/retailForm.php"); ?>
+<?php include(ROOT_PATH . "/app/controllers/retailUserForm.php"); ?>
 
 
 <!DOCTYPE html>
@@ -60,15 +60,23 @@
        <thead>
         <th>SN</th>
         <th>Name</th>
-        <th colspan="2">Action</th>
+        <th colspan="4">Action</th>
        </thead>
        <tbody>
         <?php foreach ($rtlForms as $key => $rtlForm) : ?>
          <tr>
           <td><?php echo $key + 1; ?></td>
-          <td><?php echo $rtlForm['rtlBusinessName']; ?></td>
-          <td><a href="edit.php?id=<?php echo $rtlForm['id']; ?>" class="edit">edit</a></td>
-          <td><a href="index.php?rev_id=<?php echo $rtlForm['id']; ?>" class="delete">Review</a></td>
+          <td><?php echo $rtlForm['rtlBusinessName'] ?></td>
+          <td>Jeremy</td>
+          <td><a href="retailEdit.php?id=<?php echo $rtlForm['id']; ?>" class="edit">edit</a></td>
+          <td><a href="rtlhome.php?del_id=<?php echo $rtlForm['id']; ?>" class="delete">delete</a></td>
+
+          <?php if ($rtlForm['published']) : ?>
+           <td><a href="retailEdit.php?published=0&p_id=<?php echo $rtlForm['id'] ?>" class="unpublish">unpublish</a></td>
+          <?php else : ?>
+           <td><a href="retailEdit.php?published=1&p_id=<?php echo $rtlForm['id'] ?>" class="publish">publish</a></td>
+          <?php endif; ?>
+
          </tr>
         <?php endforeach; ?>
 

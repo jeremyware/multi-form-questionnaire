@@ -27,15 +27,17 @@
 
     <div class="left-sidebar">
       <ul>
-        <li id="mrcUBtnP2"><a href="#">Business Info</a></li>
-        <li id="mrcUBtnP3"><a href="#">Business Profile</a></li>
-        <li id="mrcUBtnP4"><a href="#">Owner Information</a></li>
-        <li id="mrcUBtnP5"><a href="#">Product Info</a></li>
-        <li id="mrcUBtnP6"><a href="#">Business Info</a></li>
-        <li id="mrcUBtnP7"><a href="#">Business Profile</a></li>
-        <li id="mrcUBtnP8"><a href="#">Owner Information</a></li>
-        <li id="mrcUBtnP9"><a href="#">Product Info</a></li>
-        <li id="mrcUBtnP10"><a href="#">Owner Information</a></li>
+        <li id="mrcUBtnBi"><a href="#">Business Info</a></li>
+        <li id="mrcUBtnBp"><a href="#">Business Profile</a></li>
+        <li id="mrcUBtnOo"><a href="#">Owner / Officer</a></li>
+        <li id="mrcUBtnSs"><a href="#">Site Survey</a></li>
+        <li id="mrcUBtnPi"><a href="#">Product Price Information</a></li>
+        <li id="mrcUBtnCp"><a href="#">Current Account Profile</a></li>
+        <li id="mrcUBtnBa"><a href="#">Bank Information</a></li>
+        <li id="mrcUBtnOc"><a href="#">Offer / Campaign Information</a></li>
+        <li id="mrcUBtnFt"><a href="#">Fullfilment</a></li>
+        <li id="mrcUBtnCs"><a href="#">Customer Serivce</a></li>
+
       </ul>
     </div>
 
@@ -48,7 +50,7 @@
           <div class="row justify-content-center ">
             <div class="wrapper-container col-md-8 p-4 rounded mt-4 mb-5 bg-white rounde shadow-lg">
               <div class="progress mb-3" style="height:20px;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width:15%;" id="progressBar">
+                <div class="progress-bar bg-danger" role="progressbar" style="width:10%;" id="progressBar">
                   <b class="lead" id="progressText"></b>
                 </div>
               </div>
@@ -176,7 +178,7 @@
                     <input class="text-input" type="text" name="mrcBusinessEmail" id="mrcBusinessEmail" />
                   </div>
                   <div class="form-group">
-                    <a href="index.php" class="btn btn-secondary">Back</a>
+                    <a href="mrchome.php" class="btn btn-secondary">Back</a>
                     <a href="#" class="btn btn-danger" id="mrcUBtnN1">Next</a>
                   </div>
                 </div>

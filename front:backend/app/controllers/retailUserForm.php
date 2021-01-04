@@ -53,11 +53,9 @@ $rtlTransactionType = '';
 
 $rtlForms = selectAll($table);
 
-if (isset($_POST['add-form'])) {
- $errors = validateForm($_POST);
-}
 
 if (isset($_POST['add-form'])) {
+ $errors = validateForm($_POST);
  unset($_POST['add-form']);
  $rtlForm_id = create($table, $_POST);
  // dd($_POST);

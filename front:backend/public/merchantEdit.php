@@ -6,39 +6,40 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
- <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
- <link rel="stylesheet" href="../assets/css/style.css">
- <link rel="stylesheet" href="../assets/css/admin.css">
- <link rel="stylesheet" href="../assets/css/form.css">
- <title>Merchant Questionnaire</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/form.css">
+  <title>Merchant Questionnaire</title>
 </head>
 
 <body>
 
 
- <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
+  <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
- <div class="admin-wrapper">
+  <div class="admin-wrapper">
 
-  <div class="left-sidebar">
-   <ul>
-    <li id="mrcUBtnP2"><a href="#">Business Info</a></li>
-    <li id="mrcUBtnP3"><a href="#">Business Profile</a></li>
-    <li id="mrcUBtnP4"><a href="#">Owner Information</a></li>
-    <li id="mrcUBtnP5"><a href="#">Product Info</a></li>
-    <li id="mrcUBtnP6"><a href="#">Business Info</a></li>
-    <li id="mrcUBtnP7"><a href="#">Business Profile</a></li>
-    <li id="mrcUBtnP8"><a href="#">Owner Information</a></li>
-    <li id="mrcUBtnP9"><a href="#">Product Info</a></li>
-    <li id="mrcUBtnP10"><a href="#">Owner Information</a></li>
-   </ul>
-  </div>
+    <div class="left-sidebar">
+      <ul>
+        <li id="mrcUBtnBi"><a href="#">Business Info</a></li>
+        <li id="mrcUBtnBp"><a href="#">Business Profile</a></li>
+        <li id="mrcUBtnOo"><a href="#">Owner / Officer</a></li>
+        <li id="mrcUBtnSs"><a href="#">Site Survey</a></li>
+        <li id="mrcUBtnPi"><a href="#">Product Price Information</a></li>
+        <li id="mrcUBtnCp"><a href="#">Current Account Profile</a></li>
+        <li id="mrcUBtnBa"><a href="#">Bank Information</a></li>
+        <li id="mrcUBtnOc"><a href="#">Offer / Campaign Information</a></li>
+        <li id="mrcUBtnFt"><a href="#">Fullfilment</a></li>
+        <li id="mrcUBtnCs"><a href="#">Customer Serivce</a></li>
 
+      </ul>
+    </div>
 
   <div class="admin-content">
 

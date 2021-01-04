@@ -2,6 +2,7 @@
 <?php include(ROOT_PATH . "/app/controllers/retailUserForm.php"); ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +43,6 @@
    <div class="content">
     <div class="wrapper">
      <h2 class=" page-title">Retail Questionnaire</h2>
-     <!-- <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?> -->
 
      <div class="row justify-content-center ">
       <div class="wrapper-container col-md-8 p-4 rounded mt-4 mb-5 bg-white rounde shadow-lg">
@@ -52,30 +52,32 @@
         </div>
        </div>
        <form action="retailForm.php" method="POST" id="form-data">
+        <?php include(ROOT_PATH . "/app/helpers/formErrors.php"); ?>
 
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
 
         <div id="rtlUPq1">
          <h4 class="text-center bg-primary p-1 rounded text-light">Business Information</h4>
 
          <div class="form-group">
           <label for="businessName">Business Name</label>
-          <input type="text" name="rtlBusinessName" class="text-input" id="businessNameEdit">
+          <input value="<?php echo $rtlBusinessName; ?>" type="text" name="rtlBusinessName" class="text-input" id="businessNameEdit">
          </div>
          <div class="form-group">
           <label for="businessStreet1">Street Address</label>
-          <input class="text-input" type="text" id="businessStreet1" name="rtlCompanyStreet" />
+          <input value="<?php echo $rtlCompanyStreet; ?>" class="text-input" type="text" id="businessStreet1" name="rtlCompanyStreet" />
          </div>
          <div class="form-group">
           <label for="street2">Street Address Line 2</label>
-          <input class="text-input" type="text" id="businessStreet2" name="rtlCompanyStreetLine2" />
+          <input value="<?php echo $rtlCompanyStreetLine2; ?>" class="text-input" type="text" id="businessStreet2" name="rtlCompanyStreetLine2" />
          </div>
          <div class="form-group">
           <label for="city">City</label>
-          <input class="text-input" type="text" id="businessCity" name="rtlCompanyCity" />
+          <input value="<?php echo $rtlCompanyCity; ?>" class="text-input" type="text" id="businessCity" name="rtlCompanyCity" />
          </div>
          <div class="form-group">
           <label for="state">State</label>
-          <select class="text-input" id="businessState" name="rtlCompanyState">
+          <select value="<?php echo $rtl; ?>" class="text-input" id="businessState" name="rtlCompanyState">
            <option value="">Please Select</option>
            <option value="AK">Alaska</option>
            <option value="AL">Alabama</option>
@@ -133,24 +135,24 @@
          </div>
          <div class="form-group">
           <label for="zipecode">Zipcode</label>
-          <input class="text-input" type="text" id="businessZip" name="rtlCompanyZip" />
+          <input value="<?php echo $rtlCompanyZip; ?>" class="text-input" type="text" id="businessZip" name="rtlCompanyZip" />
          </div>
          <div class="form-group">
           <label for="phone">Company Phone Number</label>
-          <input class="text-input" type="text" id="businessNumber" name="rtlCompanyPhoneNumber" />
+          <input value="<?php echo $rtlCompanyPhoneNumber; ?>" class="text-input" type="text" id="businessNumber" name="rtlCompanyPhoneNumber" />
          </div>
          <div class="form-group">
           <label for="website">Company Website
           </label>
-          <input class="text-input" type="text" id="businessSite" name="rtlCompanyWebsiteUrl" />
+          <input value="<?php echo $rtlCompanyWebsiteUrl; ?>" class="text-input" type="text" id="businessSite" name="rtlCompanyWebsiteUrl" />
          </div>
          <div class="form-group">
           <label for="fname">Contact First Name</label>
-          <input class="text-input" type="text" id="contactFirst" name="rtlContactFirstName" />
+          <input value="<?php echo $rtlContactFirstName; ?>" class="text-input" type="text" id="contactFirst" name="rtlContactFirstName" />
          </div>
          <div class="form-group">
           <label for="lname">Contact Last Name</label>
-          <input class="text-input" type="text" id="contactLast" name="rtlContactLastName" />
+          <input value="<?php echo $rtlContactLastName; ?>" class="text-input" type="text" id="contactLast" name="rtlContactLastName" />
          </div>
          <br>
          <div class="form-group">
@@ -169,37 +171,37 @@
           <label for="businessStructure">Business Structure: </label>
           <br>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessCorporation" value="Corporation" />
+           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessCorporation" value="Corporation <?php echo $rtlBusinessStructure; ?>" />
            <label for="businessCorporation" class="form-check-label" for="flexRadioDefault1"> Corporation </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessLLC" value="LLC" />
+           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessLLC" value="LLC<?php echo $rtlBusinessStructure; ?> " />
            <label for="businessLLC" class="form-check-label" for="flexRadioDefault1"> LLC </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessSoleProprietor" value="Sole Proprietor" />
+           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessSoleProprietor" value="Sole Proprietor<?php echo $rtlBusinessStructure; ?> " />
            <label for="businessSoleProprietor" class="form-check-label" for="flexRadioDefault1"> Sole Proprietor </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessOther" value="Other" />
+           <input class="form-check-input" type="radio" name="rtlBusinessStructure" id="businessOther" value="Other <?php echo $rtlBusinessStructure; ?>" />
            <label for="businessOther" class="form-check-label" for="flexRadioDefault1"> Other </label>
-           <textarea type="text" class="text-input" name="rtlBusinessStructureOther" value="Other" id="businessOtherTxt"></textarea>
+           <textarea type="text" class="text-input" name="rtlBusinessStructureOther" value="<?php echo $rtlBusinessStructureOther; ?>" id="businessOtherTxt"></textarea>
            <span class="checkmark"></span>
            </label>
           </div>
          </fieldset>
          <div class="form-group">
           <label>Federal Tax ID:</label>
-          <input class="text-input" type="text" id="bussinessTaxId" name="rtlFederalTaxId" />
+          <input value="<?php echo $rtlFederalTaxId; ?>" class="text-input" type="text" id="bussinessTaxId" name="rtlFederalTaxId" />
          </div>
          <div class="form-group">
           <label>Date Business Created</label>
-          <input class="text-input" type="date" id="businessCreated" name="rtlBusinessDateFormed">
+          <input value="<?php echo $rtlBusinessDateFormed; ?>" class="text-input" type="date" id="businessCreated" name="rtlBusinessDateFormed">
           <p class="form-text text-danger" id="businessCreatedError"></p>
          </div>
          <div class="form-group">
           <label>State Business Create</label><br>
-          <select class="text-input" id="businessProfileState" name="rtlBusinessStateCreated">
+          <select value="<?php echo $rtlBusinessStateCreated; ?>" class="text-input" id="businessProfileState" name="rtlBusinessStateCreated">
            <option value="">Please Select</option>
            <option value="AK">Alaska</option>
            <option value="AL">Alabama</option>
@@ -268,43 +270,43 @@
          <fieldset id="primaryOwner">
           <div class="form-group">
            <label for="ownerFirst">First Name</label>
-           <input class="text-input" type="text" id="ownerFirst" name="rtlOwnerFirstName" />
+           <input value="<?php echo $rtlOwnerFirstName; ?>" class="text-input" type="text" id="ownerFirst" name="rtlOwnerFirstName" />
           </div>
           <div class="form-group">
            <label for="ownerLast">Last Name</label>
-           <input class="text-input" type="text" id="ownerLast" name="rtlOwnerLastName" />
+           <input value="<?php echo $rtlOwnerLastName; ?>" class="text-input" type="text" id="ownerLast" name="rtlOwnerLastName" />
           </div>
           <div class="form-group">
            <label for="ownerTitle">Title</label>
-           <input class="text-input" type="text" id="ownerTitle" name="rtlOwnerTitle" />
+           <input value="<?php echo $rtlOwnerTitle; ?>" class="text-input" type="text" id="ownerTitle" name="rtlOwnerTitle" />
 
           </div>
           <div class="form-group">
            <label for="ownerStreet2">Ownership Age</label>
-           <input class="text-input" type="text" id="ownerAge" name="rtlOwnerAge" />
+           <input value="<?php echo $rtlOwnerAge; ?>" class="text-input" type="text" id="ownerAge" name="rtlOwnerAge" />
           </div>
           <div class="form-group">
            <label for="ownerFirst">Social Security Number</label>
-           <input class="text-input" type="text" id="ownerSocial" name="rtlOwnerSocial" />
+           <input value="<?php echo $rtlOwnerSocial; ?>" class="text-input" type="text" id="ownerSocial" name="rtlOwnerSocial" />
           </div>
           <div class="form-group">
            <label for="ownerFirst">Date of Birth</label>
-           <input class="text-input" type="date" id="ownerDateOfBirth" name="rtlOwnerDateOfBirth">
+           <input value="<?php echo $rtlOwnerDateOfBirth; ?>" class="text-input" type="date" id="ownerDateOfBirth" name="rtlOwnerDateOfBirth">
 
           </div>
           <div class="form-group">
            <label for="ownerAddress">Home Address</label>
-           <input class="text-input" type="text" id="ownerStreet1" name="rtlOwnerCompanyAddress" />
+           <input value="<?php echo $rtlOwnerCompanyAddress; ?>" class="text-input" type="text" id="ownerStreet1" name="rtlOwnerCompanyAddress" />
 
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerStreet2" name="rtlOwnerCompanyAddressLine2" />
+           <input value="<?php echo $rtlOwnerCompanyAddressLine2; ?>" class="text-input" type="text" id="ownerStreet2" name="rtlOwnerCompanyAddressLine2" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerCity" name="rtlOwnerCompanyCity" />
+           <input value="<?php echo $rtlOwnerCompanyCity; ?>" class="text-input" type="text" id="ownerCity" name="rtlOwnerCompanyCity" />
           </div>
           <div class="form-group">
-           <select class="text-input" id="ownerState" name="rtlOwnerCompanyState">
+           <select value="<?php echo $rtlOwnerCompanyState; ?>" class="text-input" id="ownerState" name="rtlOwnerCompanyState">
             <option value="">Please Select</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -361,17 +363,17 @@
            </select>
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="ownerZipcode" name="rtlOwnerCompanyZip" />
+           <input value="<?php echo $rtlOwnerCompanyZip; ?>" class="text-input" type="text" id="ownerZipcode" name="rtlOwnerCompanyZip" />
           </div>
           <div class="form-group">
            <label for="ownerDriversLicense">Driver's Licenses Number</label>
-           <input class="text-input" type="text" id="ownerDriversLicense" name="rtlOwnerCompanyDriversLicense">
+           <input value="<?php echo $rtlCompanyDriversLicense; ?>" class="text-input" type="text" id="ownerDriversLicense" name="rtlOwnerCompanyDriversLicense">
           </div>
           <br>
           <div class="form-group" id="formChkBx">
            <label class="checkbox-container" for="owner2">
             Add Second Owner:
-            <input type="checkbox" id="secondaryCheck" value="yes" onchange="showHidden(this.checked)" name="owner2">
+            <input value="<?php echo $rtl; ?>" class="form-check-input" type="checkbox" id="secondaryCheck" value="yes" onchange="showHidden(this.checked)" name="owner2">
            </label>
           </div>
          </fieldset>
@@ -381,44 +383,44 @@
           <br>
           <div class="form-group">
            <label for="secondOwnerFirst">First Name</label>
-           <input class="text-input" class="firstName" type="text" id="secondOwnerFirst" name="rtlSecondaryOwnersFirstName" />
+           <input value="<?php echo $rtlSecondaryOwnersFirstName; ?>" class="text-input" class="firstName" type="text" id="secondOwnerFirst" name="rtlSecondaryOwnersFirstName" />
           </div>
           <div class="form-group">
            <label for="secondOwnerLast">Last Name</label>
-           <input class="text-input" class="lastName" type="text" id="secondOwnerLast" name="rtlSecondaryOwnersLastName">
+           <input value="<?php echo $rtlSecondaryOwnersLastName; ?>" class="text-input" class="lastName" type="text" id="secondOwnerLast" name="rtlSecondaryOwnersLastName">
           </div>
           <div class="form-group">
            <label for="secondOwnerTitle">Title</label>
-           <input class="text-input" type="text" id="secondOwnerTitle" name="rtlSecondaryOwnerTitle" />
+           <input value="<?php echo $rtlSecondaryOwnerTitle; ?>" class="text-input" type="text" id="secondOwnerTitle" name="rtlSecondaryOwnerTitle" />
           </div>
           <div class="form-group">
            <label for="secondOwnerAge">Ownership Age</label>
-           <input class="text-input" type="text" id="secondOwnerAge" name="rtlSecondaryOwnerAge" />
+           <input value="<?php echo $rtlSecondaryOwnerAge; ?>" class="text-input" type="text" id="secondOwnerAge" name="rtlSecondaryOwnerAge" />
           </div>
           <div class="form-group">
            <label for="secondOwnerSocial">Social Security Number</label>
-           <input class="text-input" type="text" id="secondOwnerSocial" name="rtlSecondaryOwnerSocial" />
+           <input value="<?php echo $rtlSecondaryOwnerSocial; ?>" class="text-input" type="text" id="secondOwnerSocial" name="rtlSecondaryOwnerSocial" />
           </div>
           <div class="form-group">
            <label for="secondOwnerBirth">Date of Birth</label>
-           <input class="text-input" type="date" id="secondDateOfBirth" name="rtlSecondaryOwnerDateOfBirth">
+           <input value="<?php echo $rtlSecondaryOwnerDateOfBirth; ?>" class="text-input" type="date" id="secondDateOfBirth" name="rtlSecondaryOwnerDateOfBirth">
           </div>
           <div class="form-group">
            <label for="secondOwnerNumber">Phone Number</label>
-           <input class="text-input" type="text" id="secondOwnerNumber" name="rtlSecondaryOwnerPhone" />
+           <input value="<?php echo $rtlSecondaryOwnerPhone; ?>" class="text-input" type="text" id="secondOwnerNumber" name="rtlSecondaryOwnerPhone" />
           </div>
           <div class="form-group">
            <label for="secondOwnerAddress">Home Address</label>
-           <input class="text-input" type="text" id="secondOwnerStreet1" name="rtlSecondaryOwnerAddress" />
+           <input value="<?php echo $rtlSecondaryOwnerAddress; ?>" class="text-input" type="text" id="secondOwnerStreet1" name="rtlSecondaryOwnerAddress" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="seecondOwnerStreet2" name="rtlSecondaryOwnerAddressLine2" />
+           <input value="<?php echo $rtlSecondaryOwnerAddressLine2; ?>" class="text-input" type="text" id="seecondOwnerStreet2" name="rtlSecondaryOwnerAddressLine2" />
           </div>
           <div class="form-group">
-           <input class="text-input" type="text" id="secondOwnerCity" name="rtlSecondaryOwnerCity" />
+           <input value="<?php echo $rtlSecondaryOwnerCity; ?>" class="text-input" type="text" id="secondOwnerCity" name="rtlSecondaryOwnerCity" />
           </div>
           <div class="form-group">
-           <select class="text-input" id="secondOwnerState" name="rtlSecondaryOwnerState">
+           <select value="<?php echo $rtlSecondaryOwnerState; ?>" class="text-input" id="secondOwnerState" name="rtlSecondaryOwnerState">
             <option value="">Please Select</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -477,11 +479,11 @@
           </div>
 
           <div class="form-group">
-           <input class="text-input" type="text" id="secondOwnerZipcode" name="rtlSecondaryOwnerZip" />
+           <input value="<?php echo $rtlsecondOwnerZipcode; ?>" class="text-input" type="text" id="secondOwnerZipcode" name="rtlSecondaryOwnerZip" />
           </div>
           <div class="form-group">
            <label for="secondOwnerDriversLicense">Driver's License Number</label>
-           <input class="text-input" type="text" id="secondOwnerDriversLicense" name="rtlSecondaryOwnerDriversLicense">
+           <input value="<?php echo $rtlSecondaryOwnerDriversLicense; ?>" class="text-input" type="text" id="secondOwnerDriversLicense" name="rtlSecondaryOwnerDriversLicense">
           </div>
          </fieldset>
          <br>
@@ -496,26 +498,26 @@
          <div class="form-group">
           <label for="productDescription">Briefly describe product/service being sold:</label>
           <br>
-          <textarea type="text" class="form-control rounded-0" name="rtlDescribeProductInfo" cols="45" rows="5" id="productDescription"></textarea>
-          <p class="form-text text-danger" id="productDescriptionError"></p>
+          <textarea type="text" class="form-control rounded-0" name="rtlDescribeProductInfo" cols="45" rows="5" id="productDescription" require></textarea>
+          <p class="form-text text-danger" value="<?php echo $rtlDescribeProductInfo; ?>" id="productDescriptionError"></p>
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">Projected Annual Volume</label>
           <br>
-          <input class="text-input" type="text" id="productVolume" name="rtlProductAnnualVolume">
+          <input value="<?php echo $rtlProductAnnualVolume; ?>" class="text-input" type="text" id="productVolume" name="rtlProductAnnualVolume">
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">Average Ticket</label>
           <br>
-          <input class="text-input" type="text" id="productAverageTicket" name="rtlProductAverageTicket">
+          <input value="<?php echo $rtlProductAverageTicket; ?>" class="text-input" type="text" id="productAverageTicket" name="rtlProductAverageTicket">
          </div>
          <br>
          <div class="form-group">
           <label for="productVolume">High Ticet</label>
           <br>
-          <input class="text-input" type="text" id="productHighTicket" name="rtlProductHighTicket">
+          <input value="<?php echo $rtlProductHighTicket; ?>" class="text-input" type="text" id="productHighTicket" name="rtlProductHighTicket">
          </div>
          <br>
          <fieldset class="transaction-input-radio" name="rtlTransactionType" id="transactionType">
@@ -523,15 +525,15 @@
            <h3> Transaction Type: </h3>
           </label>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productCardSwipe" value="Card Swipe" />
+           <input value="<?php echo $rtlTransactionType; ?>" class="form-check-input" type="radio" name="rtlTransactionType" id="productCardSwipe" value="Card Swipe" />
            <label for="productCardSwipe" class="form-check-label" for="flexRadioDefault1"> Card Swipe </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productMailTele" value="Mail order / Telehone Order" />
+           <input value="<?php echo $rtlTransactionType; ?>" class="form-check-input" type="radio" name="rtlTransactionType" id="productMailTele" value="Mail order / Telehone Order" />
            <label for="productMailTele" class="form-check-label" for="flexRadioDefault1"> Mail order / Telehone Order </label>
           </div>
           <div class="form-check">
-           <input class="form-check-input" type="radio" name="rtlTransactionType" id="productIntEco" value="Internet / Ecommerce" />
+           <input value="<?php echo $rtlTransactionType; ?>" class="form-check-input" type="radio" name="rtlTransactionType" id="productIntEco" value="Internet / Ecommerce" />
            <label for="productIntEco" class="form-check-label" for="flexRadioDefault1"> Internet / Ecommerce </label>
           </div>
          </fieldset>
